@@ -1,12 +1,10 @@
-citations <- read.csv('citations.csv')
-
 create_citation_index <- function(citation) {
   citation[which(is.na(citation))] <- "" # Remove NAs from output
   names(citation)[names(citation)=="author"] <- "subtitle"
   arg_names <- names(citation)[-1] # Remove directory
 
   # Create an entry directory if it doesn't already exist
-  cite_dir <- paste0("./content/talk/", citations[["directory"]])
+  cite_dir <- paste0("./content/talk/", citation[["directory"]])
   if (!dir.exists(cite_dir)) {
     dir.create(cite_dir)
   }
@@ -23,9 +21,10 @@ create_citation_index <- function(citation) {
 
     if (arg == "categories"){
       # Split the categories and write as a vector with \n sep
-      categories <- strsplit(citations[["categories"]], ";")[[1]]
+      categories <- strsplit(citation[["categories"]], ";")[[1]]
       write("categories:", con)
       write(paste0("  - ", categories), con)
+
     } else if (grepl("link_", arg)) {
       # Make the link buttons (code, pdf, etc.)
       if (citation[[arg]] != ""){
@@ -41,18 +40,25 @@ create_citation_index <- function(citation) {
       write(glue::glue("{arg}: {citation[[arg]]}"), con)
     }
   }
+  write("type: publication", con)
   write("---\n", con)
   write(citation[['description']], con)
   close(con)
+  return(glue::glue('{citation[["directory"]]}: 1'))
 }
 
 make_link_button <- function(citation, arg, cite_dir, link_section) {
   # Split to get the button type
   linkto <- strsplit(arg, "_")[[1]][[2]]
   linkval <- citation[[arg]]
-  icon_pack = ifelse(linkto=='osf', 'ai', 'fab') # Change later to named vector
+  icon_pack <- c(osf = "ai",
+                 pdf = "fas",
+                 bibtex = "fas",
+                 code = "fab",
+                 poster = "fas",
+                 slides = "fas")
   icon <- c(osf = "osf",
-            pdf = "pdf",
+            pdf = "file-pdf",
             bibtex = "bookmark",
             code = "github",
             poster = "chalkboard-teacher",
@@ -72,7 +78,7 @@ make_link_button <- function(citation, arg, cite_dir, link_section) {
         link_section,
         paste("  - icon: ", icon[linkto])
       ),
-      paste("    icon_pack: ", icon_pack),
+      paste("    icon_pack: ", icon_pack[linkto]),
       paste0("    name: ", linkto),
       paste0("    url: ", linkval)
     )
