@@ -51,7 +51,12 @@ make_link_button <- function(citation, arg, cite_dir, link_section) {
   linkto <- strsplit(arg, "_")[[1]][[2]]
   linkval <- citation[[arg]]
   icon_pack = ifelse(linkto=='osf', 'ai', 'fab') # Change later to named vector
-
+  icon <- c(osf = "osf",
+            pdf = "pdf",
+            bibtex = "bookmark",
+            code = "github",
+            poster = "chalkboard-teacher",
+            slides = "file-powerpoint")
   # Check if this is a file, if so append the citation directory
   linkval <-
     ifelse(
@@ -65,7 +70,7 @@ make_link_button <- function(citation, arg, cite_dir, link_section) {
     c(
       paste0(
         link_section,
-        paste("  - icon: ", linkto)
+        paste("  - icon: ", icon[linkto])
       ),
       paste("    icon_pack: ", icon_pack),
       paste0("    name: ", linkto),
