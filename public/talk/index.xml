@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks that Last on Thomas Sostarics</title>
+    <link>/talk/</link>
+    <description>Recent content in Talks that Last on Thomas Sostarics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Epistemic meaning and the LLL tune in American English</title>
+      <link>/talk/tai2022/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/tai2022/</guid>
+      <description>Sostarics, Thomas; Cole, Jennifer (2022). Epistemic meaning and the LLL tune in American English. Proceedings of the 1st International Conference on Tone and Intonation. Sonderborg, Denmark.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -33,7 +33,7 @@ enableEmoji = true
   description = ""
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "research", "about", "resources"]
+  mainSections = ["blog", "research", "about"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -114,13 +114,8 @@ enableEmoji = true
   [[menu.header]]
     name = "Research"
     title = "Research"
-    url = "/research/"
+    url = "/talk/"
     weight = 3
-  [[menu.header]]
-    name = "Resources"
-    title = "Resources"
-    url = "/resources/"
-    weight = 4
 
   # Configure footer
   [[menu.footer]]

@@ -6,7 +6,7 @@
 # Load packages required to define the pipeline:
 library(targets)
 # library(tarchetypes) # Load other packages as needed. # nolint
-
+source("make_citations.R")
 # Set target options:
 tar_option_set(
   packages = c("tibble"), # packages that your targets need to run
@@ -16,18 +16,15 @@ tar_option_set(
 
 # Replace the target list below with your own:
 list(
-  tar_target(
-    name = tstdata,
-    command = list(1,2,3,4)
-#   format = "feather" # efficient storage of large data frames # nolint
-  ),
-  tar_target(
-    name = model,
-    command = paste("aaa", tstdata, "aaa"),
-    pattern = map(tstdata),
-  ),
-tar_target(
-  name = reports,
- command = paste(model, collapse = "---")
-)
+  tar_target(citations_path, "citations.csv", format="file"),
+  tar_target(load_citations, read.csv(citations_path)),
+  tar_target(split_citations, split(load_citations, ~ directory)),
+  tar_target(publications,
+             create_citation_index(split_citations[[1L]]),
+             pattern=map(split_citations)),
+  tar_target(update_publications,
+             \(x) {
+               rerun <- len(publications)
+               build_site()
+             })
 )
