@@ -37,7 +37,7 @@ create_citation_index <- function(citation) {
       next
     } else {
       # Else do a key: value pair
-      write(glue::glue("{arg}: {citation[[arg]]}"), con)
+      write(glue::glue('{arg}: "{citation[[arg]]}"'), con)
     }
   }
   write("type: publication", con)
