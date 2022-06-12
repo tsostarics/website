@@ -52,14 +52,22 @@
     <link rel="alternate" type="application/rss+xml" href="/categories/r/index.xml" title="Thomas Sostarics" />
   
   
-  <link rel="stylesheet" href="/style.main.min.bfe20bc8daab0141d0c62f48972aabbee009564b726e76130fe6af87ba611420.css" integrity="sha256-v&#43;ILyNqrAUHQxi9IlyqrvuAJVktybnYTD&#43;avh7phFCA=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.70a1383e62108cb0f16a15039a41b9b990a2e7b035be3b3a674e26ec1d3545f7.css" integrity="sha256-cKE4PmIQjLDxahUDmkG5uZCi57A1vjs6Z04m7B01Rfc=" media="screen">
   
   
   <script src="/panelset.min.8f4cba0107356728f266d94a12a4d18ef504eda8a9a284cda73675bae7884a68.js" type="text/javascript"></script>
   
   
   <script src="/main.min.eb3ed37f13a5602aa8ac2123352283ce4bb969d18d1f0a599223d37a4ad089d9.js" type="text/javascript"></script>
-  <div class="js-toggle-wrapper">
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="/" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Thomas Sostarics">
+    </a>
+<div class="js-toggle-wrapper">
     <div class="js-toggle">
         <div class="js-toggle-track">
             <div class="js-toggle-track-check">
@@ -80,7 +88,10 @@
 
 .js-toggle-wrapper {
     display: table;
-    margin: 0 auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
 }
 
 .js-toggle {
@@ -173,11 +184,11 @@
   }
 
   .js-toggle--focus .js-toggle-thumb {
-    box-shadow: 0px 0px 2px 3px rgb(255, 167, 196);
+    box-shadow: 0px 0px 0px 0px rgb(255, 167, 196);
   }
 
   .js-toggle:active .js-toggle-thumb {
-    box-shadow: 0px 0px 5px 5px rgb(255, 167, 196);
+    box-shadow: 0px 0px 0px 0px rgb(255, 167, 196);
   }
 </style>
 
@@ -192,10 +203,16 @@
 		
 		if (this.classList.contains('js-toggle--checked')) {
 			body.classList.add('dark-mode');
+			const imagePath = document.getElementById("siteImage").src
+			const darkPath = imagePath.slice(0,-5) + "b.jpg"
+			document.getElementById("siteImage").src = darkPath
 			
 			localStorage.setItem('darkMode', 'true');
 		} else {
 			body.classList.remove('dark-mode');
+			const imagePath = document.getElementById("siteImage").src
+			const lightPath = imagePath.slice(0,-5) + "a.jpg"
+			document.getElementById("siteImage").src = lightPath
 			setTimeout(function() {
 				localStorage.removeItem('darkMode');
 			}, 100);
@@ -207,18 +224,19 @@
 		
         switcher.classList.add('js-toggle--checked');
         body.classList.add('dark-mode');
+	
+	
+	
+	window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = darkPath
+    	});
+
 	}
 
 </script>
 
-</head>
-<body>
-      <div class="grid-container">
-<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
-  <nav class="site-nav db dt-l w-100" role="navigation">
-    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="/" title="Home">
-      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Thomas Sostarics">
-    </a>
     <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
       
         

@@ -200,7 +200,7 @@ form {
   [type="button"],
   [type="reset"],
   [type="submit"] {
-    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-#{$buttonBgColor}, .hover-bg-#{$buttonHoverBgColor} ;
+    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-#{$buttonBgColor}, .hover-bg-#{$buttonHoverBgColor};
   }
   input[type="radio"],
   input[type="checkbox"] {
@@ -438,7 +438,7 @@ audio {
   @extend .b--#{$borderColor} ; 
 }
 
-// button links in single page headers + listing page footers
+// button links in single page heasubders + listing page footers
 .post-header a.btn-links,
 article footer a.btn-links {
     @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .#{$headingColor}, .hover-#{$buttonHoverTextColor}, .bg-transparent, .hover-bg-#{$buttonHoverBgColor};

@@ -1,3 +1,4 @@
+@import 'theme/set-theme';
 body.dark-mode,
 dark-mode main * {
   // apply tachyons font family and color options from config
@@ -158,12 +159,12 @@ dark-mode main * {
     [type="button"],
     [type="reset"],
     [type="submit"] {
-      @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate;
-      color: $buttonTextColorDark;
+      @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-#{$buttonBgColor}, .hover-bg-#{$buttonHoverBgColor};
+      //color: $buttonTextColorDark;
       //hover: $buttonHoverTextColorDark;
       //background-color: $buttonBgColorDark;
-     hover-bg: $buttonHoverBgColorDark;
-     hover-bg-custom-button-hover-bg-color: $buttonHoverBgColorDark;
+     //hover-bg: $buttonHoverBgColorDark;
+     //hover-bg-custom-button-hover-bg-color: $buttonHoverBgColorDark;
     }
     input[type="radio"],
     input[type="checkbox"] {
@@ -185,7 +186,7 @@ dark-mode main * {
     .action.button {
       @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .link, .pointer, .bg-animate, .b--transparent;
       color: $headlineColorDark;
-      background-color: $sidebarBgColorDark;
+      background-color: $buttonHoverBgColorDark;
       hover-bg: $buttonHoverBgColorDark;
     }
     a.action.button:hover {
@@ -332,7 +333,7 @@ dark-mode main * {
     color: transparent;
     height: .08em;
     pointer-events: none;
-    background-color: $navBgColorDark;
+    background-color: $navLinkColorDark;
   }
 
   .site-links a:hover:after {
@@ -342,7 +343,7 @@ dark-mode main * {
   .site-links a.active:after {
     width: 85%;
     color: transparent;
-    background-color: $navBgColorDark;
+    background-color: $navLinkColorDark;
     height: .08em;
   }
 
@@ -352,7 +353,7 @@ dark-mode main * {
   // Position page and series TOC
 
   nav#TableOfContents ul,
-  nav#SeriesTableOfContents ul,
+  nav#SeriesTableOfContents ul,bt
   nav#SectionTableOfContents ul {
     @extend .list, .pa0;
   }
@@ -415,11 +416,18 @@ dark-mode main * {
   // button links in single page headers + listing page footers
   .post-header a.btn-links,
   article footer a.btn-links {
-      @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .bg-transparent;
-      color:$headingColorDark;
-      hover-color:$buttonHoverTextColorDark;
-      hover-bg:$buttonHoverBgColorDark;
-  }
+    @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .bg-transparent;
+/*
+Using the dark colors with @ extend just will not work for some reason.
+Manually setting the colors here will fix things; the .bg-animate
+in the @extend will handle the fading animation. Following this:
+https://stackoverflow.com/questions/34350513/extend-hover-of-any-class-to-any-other-classs-hover-in-sass-or-scss
+*/
+&:hover {
+background: $buttonHoverBgColorDark;
+color: $siteBgColorDark;
+}
+}
 
   // dividers for talks
   .middot-divider::after {
