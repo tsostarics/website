@@ -38,31 +38,19 @@
     <loc>/collection/day02/03-blogdown/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/research/tai2022/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/poster/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/proceedings/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/research/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/blog/</loc>
+    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
     <lastmod>2021-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/social/</loc>
     <lastmod>2021-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/theme-features/</loc>
+    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
     <lastmod>2021-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/style/</loc>
@@ -137,10 +125,34 @@
     <loc>/elements/</loc>
     <lastmod>2019-02-18T12:27:33-06:00</lastmod>
   </url><url>
+    <loc>/research/2020_snl/</loc>
+  </url><url>
+    <loc>/research/2019_amlap/</loc>
+  </url><url>
     <loc>/about/</loc>
+  </url><url>
+    <loc>/research/2020_aoa/</loc>
+  </url><url>
+    <loc>/research/2021_midphon/</loc>
+  </url><url>
+    <loc>/categories/conference-talk/</loc>
   </url><url>
     <loc>/contributors/</loc>
   </url><url>
+    <loc>/research/2022_tai/</loc>
+  </url><url>
+    <loc>/categories/invited-talk/</loc>
+  </url><url>
     <loc>/license/</loc>
+  </url><url>
+    <loc>/categories/poster/</loc>
+  </url><url>
+    <loc>/research/2021_leap/</loc>
+  </url><url>
+    <loc>/categories/proceedings/</loc>
+  </url><url>
+    <loc>/research/</loc>
+  </url><url>
+    <loc>/research/2022_lsa/</loc>
   </url>
 </urlset>

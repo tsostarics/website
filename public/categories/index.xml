@@ -6,25 +6,7 @@
     <description>Recent content in Categories on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>poster</title>
-      <link>/categories/poster/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/poster/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>proceedings</title>
-      <link>/categories/proceedings/</link>
-      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/proceedings/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme Features</title>
       <link>/categories/theme-features/</link>
@@ -58,6 +40,42 @@
       <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conference talk</title>
+      <link>/categories/conference-talk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/conference-talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>invited talk</title>
+      <link>/categories/invited-talk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/invited-talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poster</title>
+      <link>/categories/poster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/poster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proceedings</title>
+      <link>/categories/proceedings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/proceedings/</guid>
       <description></description>
     </item>
     
