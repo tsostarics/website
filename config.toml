@@ -28,6 +28,7 @@ enableEmoji = true
     style = "github"
 
 [params]
+  enable_dark_mode = true
   orgName = "Northwestern University"
   orgLocal = "Chicago, IL"
   description = ""
@@ -48,14 +49,14 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water
-  theme = "plum"
+  theme = ""
 
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
-  custom_theme = ""
+  custom_theme = "hex-light"
 
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
