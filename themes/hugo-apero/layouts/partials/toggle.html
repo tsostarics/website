@@ -140,10 +140,16 @@
 		//If dark mode is selected
 		if (this.classList.contains('js-toggle--checked')) {
 			body.classList.add('dark-mode');
+			const imagePath = document.getElementById("siteImage").src
+			const darkPath = imagePath.slice(0,-5) + "b.jpg"
+			document.getElementById("siteImage").src = darkPath
 			//Save user preference in storage
 			localStorage.setItem('darkMode', 'true');
 		} else {
 			body.classList.remove('dark-mode');
+			const imagePath = document.getElementById("siteImage").src
+			const lightPath = imagePath.slice(0,-5) + "a.jpg"
+			document.getElementById("siteImage").src = lightPath
 			setTimeout(function() {
 				localStorage.removeItem('darkMode');
 			}, 100);
@@ -155,6 +161,15 @@
 		//body.classList.add('dark-mode');
         switcher.classList.add('js-toggle--checked');
         body.classList.add('dark-mode');
+	// Needed to make sure the dark mode versions of things are
+	// loaded when switching to another page with dark mode,
+	// otherwise the DOM won't be ready for the getElementById call
+	window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = darkPath
+    	});
+
 	}
 
 </script>
