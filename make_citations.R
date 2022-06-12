@@ -4,7 +4,7 @@ create_citation_index <- function(citation) {
   arg_names <- names(citation)[-1] # Remove directory
 
   # Create an entry directory if it doesn't already exist
-  cite_dir <- paste0("./content/talk/", citation[["directory"]])
+  cite_dir <- paste0("./content/research/", citation[["directory"]])
   if (!dir.exists(cite_dir)) {
     dir.create(cite_dir)
   }

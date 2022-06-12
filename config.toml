@@ -114,7 +114,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Research"
     title = "Research"
-    url = "/talk/"
+    url = "/research/"
     weight = 3
 
   # Configure footer
