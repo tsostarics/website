@@ -26,5 +26,21 @@ list(
              \(x) {
                rerun <- len(publications)
                build_site()
-             })
+             }),
+  tar_target(md_files,
+             {
+               qmd_files <- list.files("content/",
+                                       pattern = "^index\\.qmd$",
+                                       recursive=TRUE)
+               paste0("content/", gsub("qmd$", "md", qmd_files))
+             }
+  ),
+  tar_target(fix_quotes,
+             command =
+               {
+                 file_in <- readLines(md_files[[1]])
+                 file_out <- gsub("[“”]", '"', file_in)
+                 writeLines(file_out, md_files[[1]])
+               },
+             pattern = map(md_files))
 )
