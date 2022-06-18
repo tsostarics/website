@@ -21,26 +21,25 @@ list(
   tar_target(split_citations, split(load_citations, ~ directory)),
   tar_target(publications,
              create_citation_index(split_citations[[1L]]),
-             pattern=map(split_citations)),
-  tar_target(update_publications,
-             \(x) {
-               rerun <- len(publications)
-               build_site()
-             }),
-  tar_target(md_files,
-             {
-               qmd_files <- list.files("content/",
-                                       pattern = "^index\\.qmd$",
-                                       recursive=TRUE)
-               paste0("content/", gsub("qmd$", "md", qmd_files))
-             }
-  ),
-  tar_target(fix_quotes,
-             command =
-               {
-                 file_in <- readLines(md_files[[1]])
-                 file_out <- gsub("[“”]", '"', file_in)
-                 writeLines(file_out, md_files[[1]])
-               },
-             pattern = map(md_files))
+             pattern=map(split_citations))
+  # tar_target(md_filepaths,
+  #            {
+  #              qmd_files <- list.files("content/",
+  #                                      pattern = "^index\\.qmd$",
+  #                                      recursive=TRUE)
+  #              paste0("content/", gsub("qmd$", "md", qmd_files))
+  #            }
+  # ),
+  # tar_target(md_files,
+  #            md_filepaths,
+  #            pattern = map(md_filepaths),
+  #            format = 'file'),
+  # tar_target(fix_quotes,
+  #            command =
+  #              {
+  #                file_in <- readLines(md_files)
+  #                file_out <- gsub("[“”]", '"', file_in)
+  #                writeLines(file_out, md_files)
+  #              },
+  #            pattern = map(md_files))
 )
