@@ -2,7 +2,7 @@
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
 {{ $root := .Scratch.Get "$root" }}     <!--save root section-->
 <!--each article is a row-->
-<article class="pt4 w-100">
+<article class="pt1 w-100">
 
   <!--if show_post_thumbnail is TRUE in root-->
   {{ if $root.Params.show_post_thumbnail }}
@@ -31,7 +31,7 @@
       </header>
       {{ $summary := cond (ne .Params.subtitle nil) .Params.subtitle .Summary }}
       {{ $excerpt := cond (ne .Params.excerpt nil) .Params.excerpt .Summary }}
-      {{ $fullsummary := delimit (slice $summary $excerpt) "<br>" }}
+      {{ $fullsummary := delimit (slice $summary $excerpt) "<br />" }}
       {{ with $fullsummary }}<p class="f6 lh-copy mv2 flex-auto measure-wide">{{ . | markdownify | emojify }}</p>{{ end }}
       <footer class="w-100">
       <!--ensures section Params are respected-->
@@ -64,7 +64,7 @@
 
   <!--if show_post_thumbnail is FALSE in root-->
   {{ else }}
-  <div class="measure-wide center mb4 mb5-l">
+  <div class="measure-wide center mb4 mb2-l">
     <header>
       <h1 class="f4 mt0 mb2 lh-title underline fw4"><a href="{{ .RelPermalink }}" class="db">{{ .Title | markdownify }}</a></h1>
       {{ range first 1 (.GetTerms "series") }}
@@ -74,7 +74,7 @@
       {{ $summary := cond (ne .Params.subtitle nil) .Params.subtitle .Summary }}
       {{ $excerpt := cond (ne .Params.excerpt nil) .Params.excerpt .Summary }}
       {{ $fullsummary := delimit (slice $summary $excerpt) "<br>" }}
-      {{ with $fullsummary }}<p class="lh-copy mb4">{{ . | markdownify | emojify }}</p>{{ end }}
+      {{ with $fullsummary }}<p class="lh-copy mb2">{{ . | markdownify | emojify }}</p>{{ end }}
     <footer>
       {{ if $root.Params.show_post_date }}<p class="f7 dib mv1">{{ partial "shared/date-range.html" . }}</p>{{ end }}
       {{ if .Params.event }}
