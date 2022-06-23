@@ -6,7 +6,7 @@ use_featured: false # if false, use most recent by date
 number_categories: 3 # set to zero to exclude
 show_intro: true
 intro: |
-  I am a PhD student in Linguistics at Northwestern University interested in prosody, pragmatics, phonetics, and aphasia. My research focuses on data-driven experimental approaches to understanding intonational meaning in American English. Adjacent to my research, I am interested in R package development, ordinal data analysis, and experimental design. 
+  I am a PhD student in Linguistics at Northwestern University interested in prosody, pragmatics, phonetics, and aphasia. My research focuses on data-driven experimental approaches to understanding intonational meaning in American English. Adjacent to my research, I am interested in R package development, ordinal data analysis, data visualization, and experimental design. Outside of my research, I enjoy horror movies, graphic design, biking, and taking photos of cities. My website uses photos I've taken from around Chicago and Japan.
   
   Before coming to Northwestern, I obtained a BA in Linguistics from the [University of Chicago](https://linguistics.uchicago.edu/), where I also worked with electrophysiological experiments on concessive connectors.
   
