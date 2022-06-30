@@ -14,6 +14,8 @@ tar_option_set(
   # Set other options as needed.
 )
 
+qmd_files <- paste0('content/',list.files('content', pattern = ".qmd", recursive = TRUE))
+
 # Replace the target list below with your own:
 list(
   tar_target(citations_path, "citations.csv", format="file"),
@@ -21,7 +23,19 @@ list(
   tar_target(split_citations, split(load_citations, ~ directory)),
   tar_target(publications,
              create_citation_index(split_citations[[1L]]),
-             pattern=map(split_citations))
+             pattern=map(split_citations)),
+  tar_target(quarto_files, qmd_files),
+  tar_target(quarto_docs,
+             quarto::quarto_render(quarto_files),
+             pattern = quarto_files),
+  tar_target(md_files, gsub("qmd$", "md", quarto_files)),
+  tar_target(fix_quotes,
+             {
+                 file_in <- readLines(md_files)
+                 file_out <- gsub("[“”‘’]", '"', file_in)
+                 writeLines(file_out, md_files)
+               },
+             pattern = md_files)
   # tar_target(md_filepaths,
   #            {
   #              qmd_files <- list.files("content/",
