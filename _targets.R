@@ -5,7 +5,7 @@
 
 # Load packages required to define the pipeline:
 library(targets)
-# library(tarchetypes) # Load other packages as needed. # nolint
+library(tarchetypes) # Load other packages as needed. # nolint
 source("make_citations.R")
 # Set target options:
 tar_option_set(
@@ -14,8 +14,8 @@ tar_option_set(
   # Set other options as needed.
 )
 
-qmd_files <- paste0('content/',list.files('content', pattern = ".qmd", recursive = TRUE))
-
+qmd_paths <- list.files('content', pattern = ".qmd", recursive = TRUE,full.names = TRUE)
+md_paths <- gsub("qmd$", "md", qmd_paths)
 # Replace the target list below with your own:
 list(
   tar_target(citations_path, "citations.csv", format="file"),
@@ -24,17 +24,20 @@ list(
   tar_target(publications,
              create_citation_index(split_citations[[1L]]),
              pattern=map(split_citations)),
-  tar_target(quarto_files, qmd_files),
+  # Quarto rendering targets
+  tarchetypes::tar_files_input(quarto_files, qmd_paths, priority = 1),
   tar_target(quarto_docs,
              quarto::quarto_render(quarto_files),
-             pattern = quarto_files),
-  tar_target(md_files, gsub("qmd$", "md", quarto_files)),
+             pattern = quarto_files,
+             priority = 1),
+  # Fix quotes in resulting md files
+  tarchetypes::tar_files_input(md_files, md_paths, priority = .1),
   tar_target(fix_quotes,
              {
-                 file_in <- readLines(md_files)
-                 file_out <- gsub("[“”‘’]", '"', file_in)
-                 writeLines(file_out, md_files)
-               },
+               file_in <- readLines(md_files)
+               file_out <- gsub("[“”‘’]", '"', file_in)
+               writeLines(file_out, md_files)
+             },
              pattern = md_files)
   # tar_target(md_filepaths,
   #            {
