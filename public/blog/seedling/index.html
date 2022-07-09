@@ -298,14 +298,14 @@ Question Which came first: the 🐔 or the 🥚?"><meta itemprop="datePublished"
 
 </div>
 <p>Was created by combining this theme&rsquo;s <code>panelset</code> and <code>panel</code> shortcodes:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{&lt; panelset class=<span style="color:#d14">&#34;greetings&#34;</span> &gt;}}
-</span></span><span style="display:flex;"><span>{{&lt; panel name=<span style="color:#d14">&#34;Hello! :wave:&#34;</span> &gt;}}
-</span></span><span style="display:flex;"><span>  hello
-</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#000;font-weight:bold">/</span>panel &gt;}}
-</span></span><span style="display:flex;"><span>{{&lt; panel name=<span style="color:#d14">&#34;Goodbye :dash:&#34;</span> &gt;}}
-</span></span><span style="display:flex;"><span>  goodbye
-</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#000;font-weight:bold">/</span>panel &gt;}}
-</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#000;font-weight:bold">/</span>panelset &gt;}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{&lt; <span style="color:#a6e22e">panelset</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;greetings&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#a6e22e">panel</span> <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;Hello! :wave:&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">hello</span>
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">/</span><span style="color:#a6e22e">panel</span> &gt;}}
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#a6e22e">panel</span> <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;Goodbye :dash:&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">goodbye</span>
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">/</span><span style="color:#a6e22e">panel</span> &gt;}}
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">/</span><span style="color:#a6e22e">panelset</span> &gt;}}
 </span></span></code></pre></div><p>You could also revert to HTML as well. For example, this panelset:</p>
 <div class="panelset">
   <div class="panel">
@@ -320,18 +320,18 @@ Question Which came first: the 🐔 or the 🥚?"><meta itemprop="datePublished"
   </div>
 </div>
 <p>Was created with this HTML code:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;panelset&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;panel&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;panel-name&#34;</span>&gt;Question&lt;/<span style="color:#000080">div</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">&lt;!-- Panel content --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">p</span>&gt;Which came first: the 🐔 or the 🥚?&lt;/<span style="color:#000080">p</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080">div</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;panel&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;panel-name&#34;</span>&gt;Answer 🐣&lt;/<span style="color:#000080">div</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">&lt;!-- Panel content --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">p</span>&gt;Team 🥚 FTW!&lt;/<span style="color:#000080">p</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080">div</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">div</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panelset&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panel&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panel-name&#34;</span>&gt;Question&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Panel content --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Which came first: the 🐔 or the 🥚?&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panel&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panel-name&#34;</span>&gt;Answer 🐣&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Panel content --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Team 🥚 FTW!&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span></code></pre></div>
         
         <details closed class="f6 fw7 input-reset">

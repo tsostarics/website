@@ -95,5 +95,28 @@ Overview Since I began building websites in Y2K, I&amp;rsquo;ve lost count how m
       <description>Formspree makes it easy to receive submissions from HTML forms on your static website. Functional Form This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the front matter of the form (/content/forms/contact.md). Of course, the example shown below (your@email.here) must not be used. Please use your actual email address.</description>
     </item>
     
+    <item>
+      <title>Demo</title>
+      <link>/blog/demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/demo/</guid>
+      <description>Quarto Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.
+Hello! 👋 hello
+Goodbye 💨 goodbye
+Running Code When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+library(sostools) library(contrastable) library(ordinal) library(tidyverse) Here is an example of a 6-point rating scale where using a logit link would not serve us well, and a different choice of link function is needed.</description>
+    </item>
+    
+    <item>
+      <title>Demo</title>
+      <link>/blog/panelsetdemo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/panelsetdemo/</guid>
+      <description>Plot Goodbye wowee 💨 plot(rnorm(100, 0, 1)) a &amp;lt;- 1 b &amp;lt;- 4 c &amp;lt;- a + b Quarto Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.
+Running Code When you click the Render button a document will be generated that includes both &amp;ldquo;content&amp;rdquo; and the output of embedded code. You can embed code like this:</description>
+    </item>
+    
   </channel>
 </rss>

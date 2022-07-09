@@ -39,24 +39,4 @@ list(
                writeLines(file_out, md_files)
              },
              pattern = md_files)
-  # tar_target(md_filepaths,
-  #            {
-  #              qmd_files <- list.files("content/",
-  #                                      pattern = "^index\\.qmd$",
-  #                                      recursive=TRUE)
-  #              paste0("content/", gsub("qmd$", "md", qmd_files))
-  #            }
-  # ),
-  # tar_target(md_files,
-  #            md_filepaths,
-  #            pattern = map(md_filepaths),
-  #            format = 'file'),
-  # tar_target(fix_quotes,
-  #            command =
-  #              {
-  #                file_in <- readLines(md_files)
-  #                file_out <- gsub("[“”]", '"', file_in)
-  #                writeLines(file_out, md_files)
-  #              },
-  #            pattern = map(md_files))
 )
