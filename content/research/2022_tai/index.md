@@ -21,7 +21,7 @@ links:
   - icon:  file-pdf
     icon_pack:  fas
     name: pdf
-    url: /research/2022_tai/SostaricsCole2022.pdf
+    url: /research/2022_tai/sostarics21_tai.pdf
   - icon:  chalkboard-teacher
     icon_pack:  fas
     name: poster
@@ -29,8 +29,8 @@ links:
   - icon:  bookmark
     icon_pack:  fas
     name: bibtex
-    url: /research/2022_tai/sostarics2022tai.bib
+    url: /research/2022_tai/sostarics21.bib
 type: publication
 ---
 
-Sostarics, Thomas; Cole, Jennifer (2022). Epistemic meaning and the LLL tune in American English. Proceedings of the 1st International Conference on Tone and Intonation. Sonderborg, Denmark.
+Sostarics, T., Cole, J. (2021) Epistemic Meaning and the LLL Tune in American English. Proc. 1st International Conference on Tone and Intonation (TAI), 11-15, doi: 10.21437/TAI.2021-3

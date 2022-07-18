@@ -282,6 +282,46 @@ tags, series, and pagination.
   
   <div class="flex flex-column mb4 mb5-l  flex-row-ns">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
+      <a href="/blog/spoonful-series/01-spoonful/" class="db">
+        
+          <img src="/blog/spoonful-series/sidebar-featured.jpg" class="db ma0 dim" alt="">
+        
+      </a>
+    </figure>
+    <div class="flex flex-column w-100 w-60-ns pr3-ns">
+      <header class="w-100">
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/spoonful-series/01-spoonful/" class="db">A first post</a></h1>
+        
+        <h2 class="f5"><i class="fas fa-stream fa-fw pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="/blog/spoonful-series/">A Spoonful of Hugo</a></h2>
+        
+      </header>
+      
+      <p class="f6 lh-copy mv2 flex-auto">Grid is the very first CSS module created specifically to solve the layout problems we’ve all been hacking our way around for as long as we’ve been making websites.</p>
+      <footer class="w-100">
+      
+      <p class="f7 db mv1">By Alison Hill in <a href="/categories/theme-features">Theme Features</a>  <a href="/categories/r">R</a> </p>
+      <p class="f7 db mv1">January 1, 2021</p>
+      
+    </footer>
+    </div>
+  </div>
+
+  
+  
+</article>
+
+      
+        
+                                   
+     
+     
+<article class="mv4 mv5-l bb">
+
+  
+  
+  
+  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
+    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="/blog/rmarkdown/" class="db">
         
       </a>
@@ -442,12 +482,9 @@ Running Code When you click the Render button a document will be generated that 
         
       </header>
       
-      <p class="f6 lh-copy mv2 flex-auto">Quarto Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see 
-<a href="https://quarto.org" target="_blank" rel="noopener">https://quarto.org</a>.
-Hello! 👋 hello
-Goodbye 💨 goodbye
-Running Code When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-library(sostools) library(contrastable) library(ordinal) library(tidyverse) Here is an example of a 6-point rating scale where using a logit link would not serve us well, and a different choice of link function is needed.</p>
+      <p class="f6 lh-copy mv2 flex-auto">Running Code When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+library(sostools) library(contrastable) library(ordinal) library(tidyverse) Here is an example of a 6-point rating scale where using a logit link would not serve us well, and a different choice of link function is needed.
+conf_data &lt;- read_csv(r&quot;(C:\Users\Thomas\Downloads\data_Mazor_2020.csv)&quot;) |&gt; filter(!is.nan(Confidence)) |&gt; mutate(Confidence = ordered(Confidence,levels=1:6), Subj_idx = factor(Subj_idx), Condition = factor(Condition)) head(conf_data) # A tibble: 6 × 10Subj_idx Stimulus Response Confidence RT_dec Conf_presses Condition Accuracy&lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt; &lt;dbl&gt;1 1 0 0 6 0.</p>
       <footer class="w-100">
       
       <p class="f7 db mv1">By The R Markdown Team @RStudio</p>

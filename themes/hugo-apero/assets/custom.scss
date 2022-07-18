@@ -61,7 +61,13 @@ dark-mode main * {
     > p { @extend .lh-copy ; }
 
     > p > code {
-      @extend .f6, .ph1, .bg-white-50 ;
+      @extend .f6, .ph1, .bg-white-10 ;
+      color: #eccd37;
+    }
+ 
+    > ul > li > code {
+      @extend .f6, .ph1, .bg-white-10 ;
+      color: #eccd37;
     }
 
     blockquote {

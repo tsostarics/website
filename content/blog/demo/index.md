@@ -6,11 +6,10 @@ format: hugo
 #     code-fold: true
 #     code-copy: true
 #     code-overflow: wrap
-editor: visual
+editor: source
 execute:
   message: false
 ---
-
 
 
 

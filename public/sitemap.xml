@@ -39,7 +39,13 @@
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/contrastable/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
     <lastmod>2021-01-28T00:00:00+00:00</lastmod>
@@ -48,9 +54,6 @@
     <lastmod>2021-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/theme-features/</loc>
-    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2021-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/style/</loc>

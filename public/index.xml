@@ -6,7 +6,7 @@
     <description>Recent content on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>/collection/day02/01-netlify/</link>
@@ -119,6 +119,16 @@ Clone GitHub repo usethis::create_from_github(&amp;quot;https://github.com/apres
       <description> Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
 Here I am: content/collection\day02\03-blogdown\index.md To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
 My content section is: collection My layout is: single-series part 2! does this work? now for some very cool things more get ready! </description>
+    </item>
+    
+    <item>
+      <title>Contrastable</title>
+      <link>/blog/contrastable/</link>
+      <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/contrastable/</guid>
+      <description>I&amp;rsquo;ve been working on a package called contrastable on and off for the past year or so. Setting the contrasts for different factors for regression analyses can be a tedious and error-prone process, especially when the number of levels for a factor is more than 2. In this post I will:
+Run through an example of a typical contrast coding workflow using contrasts&amp;lt;-. I will give an example of an error that can arise due to a typo, and show how to diagnose what this error actually reflects by checking the hypothesis matrix.</description>
     </item>
     
     <item>
@@ -318,11 +328,9 @@ Allison Horst 🐕 (awesome illustrations of campfires, seedlings, and evergreen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/blog/demo/</guid>
-      <description>Quarto Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.
-Hello! 👋 hello
-Goodbye 💨 goodbye
-Running Code When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-library(sostools) library(contrastable) library(ordinal) library(tidyverse) Here is an example of a 6-point rating scale where using a logit link would not serve us well, and a different choice of link function is needed.</description>
+      <description>Running Code When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+library(sostools) library(contrastable) library(ordinal) library(tidyverse) Here is an example of a 6-point rating scale where using a logit link would not serve us well, and a different choice of link function is needed.
+conf_data &amp;lt;- read_csv(r&amp;#34;(C:\Users\Thomas\Downloads\data_Mazor_2020.csv)&amp;#34;) |&amp;gt; filter(!is.nan(Confidence)) |&amp;gt; mutate(Confidence = ordered(Confidence,levels=1:6), Subj_idx = factor(Subj_idx), Condition = factor(Condition)) head(conf_data) # A tibble: 6 × 10Subj_idx Stimulus Response Confidence RT_dec Conf_presses Condition Accuracy&amp;lt;fct&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;ord&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;dbl&amp;gt;1 1 0 0 6 0.</description>
     </item>
     
     <item>
@@ -341,7 +349,7 @@ Running Code When you click the Render button a document will be generated that 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/research/2022_tai/</guid>
-      <description>Sostarics, Thomas; Cole, Jennifer (2022). Epistemic meaning and the LLL tune in American English. Proceedings of the 1st International Conference on Tone and Intonation. Sonderborg, Denmark.</description>
+      <description>Sostarics, T., Cole, J. (2021) Epistemic Meaning and the LLL Tune in American English. Proc. 1st International Conference on Tone and Intonation (TAI), 11-15, doi: 10.21437/TAI.2021-3</description>
     </item>
     
     <item>

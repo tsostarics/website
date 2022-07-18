@@ -1,0 +1,160 @@
+---
+title: "Contrastable"
+author: "Thomas Sostarics"
+date: '2022-07-13'
+format: hugo
+editor: source
+execute:
+  message: false
+  echo: true
+---
+
+
+I've been working on a package called `contrastable` on and off for the past
+year or so.
+Setting the contrasts for different factors for regression analyses can be a
+tedious and error-prone process, especially when the number of levels for a 
+factor is more than 2.
+In this post I will:
+
+
+ - Run through an example of a typical contrast coding workflow using `contrasts<-`.
+ I will give an example of an error that can arise due to a typo, and show
+ how to diagnose what this error actually reflects by checking the hypothesis
+ matrix.
+ - Show how the `contrastable` package can be used to sidestep mistakes caused
+ by error-prone and tedious calls to `contrasts<-`.
+
+Typically when I see people in my field (Linguistics) set contrasts, they
+do something like the following, using the `palmerpenguins` dataset as an 
+example.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(palmerpenguins)
+penguins_df <- penguins
+
+# Default treatment/dummy coding for a 2 and 3 level factor
+contrasts(penguins_df$sex)
+contrasts(penguins_df$species)
+
+# Easy enough for 2 levels
+contrasts(penguins_df$sex) <- c(.5, -.5)
+
+# Not so fun for three levels!
+contrasts(penguins_df$species) <- matrix(c(-1/3, 2/3, -1/3,
+                                           -1/3, -1/3, 2/3),
+                                         nrow = 3)
+```
+
+The chance of making a mistake increases when including more and more
+categorical variables.
+Catching these mistakes can be very difficult, in part because this workflow
+erases the labels in the regression output 
+This means you have to keep track of what `1` and `2` correspond to.
+While the `dimnames` argument can be used to set the labels, anecdotally
+I rarely see people use this in their analyses when perusing code on the osf. 
+Below, the two sets of coefficients represent pairwise comparisons to
+the `Adelie` baseline, but the intercepts differ due to how the contrasts
+are set.
+
+
+```{r}
+coef(lm(bill_length_mm ~ species, data = penguins))    # Treatment coding
+coef(lm(bill_length_mm ~ species, data = penguins_df)) # Scaled sum coding
+```
+
+Had we made a mistake in the manually-set contrast matrix, we would reach
+an incorrect conclusion about the difference between groups.
+
+```{r}
+# What if we accidentally typed 1/3 instead of 2/3?
+contrasts(penguins_df$species) <- matrix(c(-1/3, 1/3, -1/3,
+                                           -1/3, -1/3, 2/3),
+                                         nrow = 3)
+coef(lm(bill_length_mm ~ species, data = penguins_df)) # Scaled sum coding
+```
+
+Here we can see that the intercept and the value for `species1` has changed.
+To what though??
+To check what these numbers correspond to, we have to check the
+*hypothesis matrix* that corresponds to our *contrast matrix*.
+The process of obtaining the hypothesis matrix has been referred to as finding
+the generalized inverse of the contrast matrix, see (vasisth's paper) for 
+details.
+
+```{r}
+matrix(c(1, 1, 1,         # Add a column of 1s for the intercept
+         -1/3, 1/3, -1/3,
+         -1/3, -1/3, 2/3),
+       nrow = 3,
+       dimnames = list(NULL, c('Intercept', 'species1', 'species2'))) |> 
+  t() |> 
+  solve() |> 
+  MASS::fractions()
+```
+
+Here the intercept is represented by the weighted sum of each group mean,
+where the weights are shown in the intercept column.
+We can double check this ourselves:
+
+```{r}
+group_means <- 
+  penguins |>
+  dplyr::group_by(species) |> 
+  dplyr::summarize(mean_length = mean(bill_length_mm, na.rm = TRUE)) |> 
+  purrr::pluck('mean_length') |> 
+  `names<-`(c('Adelie', 'Chinstrap', 'Gentoo'))
+
+weighted.mean(group_means, c(1/6, 1/2, 1/3))
+```
+
+
+Similarly, the coefficient for `species1` shows the difference between the
+group means of levels 1 and 2 (i.e., mean of Chinstrap - mean of Adelie) but
+times a factor of `3/2`.
+Crucially, if our goal is to evaluate the difference between the means of
+these two levels, then our mistake in coding the hypothesis matrix will give
+us a larger estimate (~15 vs 10).
+Consider a similar setup where the larger estimate was 5 instead of 0; if
+we were relying on null hypothesis testing it's possible we'd get a significant
+effect when really we shouldn't have.
+
+```{r}
+(3/2 * group_means[['Chinstrap']]) - (3/2 * group_means[['Adelie']])
+group_means[['Chinstrap']] - group_means[['Adelie']]
+```
+
+Point being: we made an honest mistake of typing `1/3` instead of `2/3` but
+this had ramifications for the coefficients in our model output that we use
+to make inferences. If we saw the coveted `***` for our significance test,
+we might not think to double check ourselves because we would believe that
+our setup was done correctly.
+
+## Contrastable
+
+Here I'll show a different approach using the `contrastable` package.
+This package takes a more tidy approach to take care of the overhead of
+labels and reference levels involved when using common contrast coding schemes.
+Here's an example where we set the `sex` and `species` factors to two different
+contrast schemes.
+
+```{r}
+library(contrastable)
+
+penguins_df <- 
+  penguins |> 
+  set_contrasts(sex ~ sum_code + "female", # Set reference level with +
+                species ~ scaled_sum_code + 'Adelie') 
+
+contrasts(penguins_df$species) |> MASS::fractions()
+contrasts(penguins_df$sex) |> MASS::fractions()
+```
+
+`penguins_df` now has all of its contrasts set, 
+
+```{r}
+coef(lm(bill_length_mm ~ species, data = penguins_df))
+```
+ 
