@@ -13,9 +13,16 @@ execute:
 
 I've been working on a package called `contrastable` on and off for the past
 year or so.
-Setting the contrasts for different factors for regression analyses can be a
-tedious and error-prone process, especially when the number of levels for a
-factor is more than 2.
+The package's goal is to provide a tidy approach to setting factor contrasts
+for regression analysis.
+While this can be done with repeated `contrasts<-` calls, this workflow
+is tedious when working with multiple factors and especially error-prone
+when manually specifying contrast matrices to use.
+In this latter case, the user would need to be careful to specify the correct
+fractions in the correct order with the correct signs, which can be a lot to
+keep track of.
+These issues quickly become apparent when the number of factor levels is
+greater than 2.
 In this post I will:
 
 -   Run through an example of a typical contrast coding workflow using `contrasts<-`.
@@ -25,17 +32,112 @@ In this post I will:
 -   Show how the `contrastable` package can be used to sidestep mistakes caused
     by error-prone and tedious calls to `contrasts<-`.
 
-Typically when I see people in my field (Linguistics) set contrasts, they
+## Contrast overview
+
+Contrast coding refers to assigning numeric values to levels of a categorical
+variable for use in regression analyses.
+Depending on the numbers used, different comparisons can be made between the
+group means of a variable.
+These comparisons can correspond to particular null hypotheses that a
+researcher might have, and particular combinations of numbers can encode
+high-level questions like "Are there differences between levels when compared
+to a common reference level?" or "Does each level differ from the levels
+that came before it?"
+Critically, the contrasts used don't impact the model fit but do impact the
+coefficient estimates that are used to make inferences about the data.
+
+In most cases in Linguistics, people tend to want pairwise comparisons while
+retaining main effects in their model; e.g., the main effect of speech rate
+on intelligibility when L1 vs L2 speakers are considered as a categorical fixed
+effect.
+Many people realize (or are starting to at least) that the default
+"0/1 contrasts" (aka treatment or dummy coding) will only give them the simple
+effect of intelligibility; that is, the effect of intelligibility for just the
+L1 group.
+To rectify this, researchers will opt for "the +.5/-.5 contrasts" to obtain
+main effects.
+
+However, the name for this contrast scheme is inconsistent, especially in the
+2-level case.
+I've seen it called sum coding, simple coding, effects coding, scaled sum
+coding, helmert coding, difference coding, contrast coding, sum-to-zero coding,
+and +.5/-.5 coding.
+Most implementations of these contrast schemes give the same results when 2
+levels are used, but yield very different contrast matrices when the number of
+levels is greater than 2, and thus address very different research questions
+about the data.
+Here I'll use some functions from my package that provide matrices for different
+contrast schemes, but typically people set these manually.
+
+``` r
+library(contrastable)
+helmert_code(2) |> MASS::fractions()
+```
+
+         [,1]
+    [1,]  1/2
+    [2,] -1/2
+
+``` r
+scaled_sum_code(2) |> MASS::fractions()
+```
+
+      [,1]
+    1  1/2
+    2 -1/2
+
+``` r
+helmert_code(3) |> MASS::fractions()
+```
+
+         [,1] [,2]
+    [1,]  2/3    0
+    [2,] -1/3  1/2
+    [3,] -1/3 -1/2
+
+``` r
+scaled_sum_code(3) |> MASS::fractions()
+```
+
+      [,1] [,2]
+    1  2/3 -1/3
+    2 -1/3  2/3
+    3 -1/3 -1/3
+
+Note that I use the term *scaled sum coding* for the "pairwise comparisons with
+main effects" contrast scheme.
+I opt for this term for three reasons.
+First, I see sum coding used more frequently in statistics and econometrics to refer
+to +1/-1; this is also what `contr.sum` in R returns.
+Second, the salient part of going from sum coding to scaled sum coding, especially
+in the 2-level case, is that there's some kind of division or scaling operation
+involved; I frequently see people use `contr.sum(2)/2`, although importantly
+`contr.sum(3)/3` does not yield the expected result.
+Third, "simple" coding is counterintuitive to me since we're trying to *avoid*
+"simple effects;" "effects coding" and "contrast coding" are largely meaningless
+as all coding schemes will encode some kind of effect, and setting *any*
+contrast matrix is an instance of contrast coding.
+So, for the researcher trying to remember "I need to use those contrasts
+where they're divided to get the main effects", it (to me) seems easy to
+reach for a tool where *scaled* is in the name and is clearly distinguished
+from sum coding.
+If it were really up to me, I would call it "centered pairwise coding" since
+you get pairwise comparisons with the intercept centered on the grand mean,
+but it doesn't quite roll off the tongue and I doubt it would catch on.
+
+## Typical approach to contrast coding
+
+Typically when I see people in Linguistics set contrasts, they
 do something like the following, using the `palmerpenguins` dataset as an
 example.
 
 ``` r
 library(tidyverse)
 library(palmerpenguins)
-penguins_df <- penguins
+penguins_with_contrasts <- penguins
 
 # Default treatment/dummy coding for a 2 and 3 level factor
-contrasts(penguins_df$sex)
+contrasts(penguins_with_contrasts$sex)
 ```
 
            male
@@ -43,7 +145,7 @@ contrasts(penguins_df$sex)
     male      1
 
 ``` r
-contrasts(penguins_df$species)
+contrasts(penguins_with_contrasts$species)
 ```
 
               Chinstrap Gentoo
@@ -52,35 +154,41 @@ contrasts(penguins_df$species)
     Gentoo            0      1
 
 ``` r
-# Easy enough for 2 levels
-contrasts(penguins_df$sex) <- c(.5, -.5)
+# Easy enough for 2 levels, -contr.sum(2)/2 is also used a lot
+contrasts(penguins_with_contrasts$sex) <- c(-.5, .5) 
 
 # Not so fun for three levels!
-contrasts(penguins_df$species) <- matrix(c(-1/3, 2/3, -1/3,
-                                           -1/3, -1/3, 2/3),
-                                         nrow = 3)
+contrasts(penguins_with_contrasts$species) <- matrix(c(-1/3, 2/3, -1/3,
+                                                       -1/3, -1/3, 2/3),
+                                                     nrow = 3)
 ```
 
 The chance of making a mistake increases when including more and more
 categorical variables.
 Catching these mistakes can be very difficult, in part because this workflow
-erases the labels in the regression output
-This means you have to keep track of what `1` and `2` correspond to.
+erases the labels in the regression output.
+This means you have to keep track of what `1` and `2` in the regression
+coefficients correspond to.
 While the `dimnames` argument can be used to set the labels, anecdotally
 I rarely see people use this in their analyses when perusing code on the osf.
 Below, the two sets of coefficients represent pairwise comparisons to
 the `Adelie` baseline, but the intercepts differ due to how the contrasts
-are set.
+are set, with the first using treatment coding and the second using
+scaled sum coding.
+I'll start with a case that only considers the categorical variable,
+but will include an additional continuous independent variable later on.
 
 ``` r
-coef(lm(bill_length_mm ~ species, data = penguins))    # Treatment coding
+# Compare the default treatment coding with the penguins dataset
+# with the contrasts we specified in penguins_with_contrasts
+coef(lm(bill_length_mm ~ species, data = penguins))    
 ```
 
          (Intercept) speciesChinstrap    speciesGentoo 
            38.791391        10.042433         8.713487 
 
 ``` r
-coef(lm(bill_length_mm ~ species, data = penguins_df)) # Scaled sum coding
+coef(lm(bill_length_mm ~ species, data = penguins_with_contrasts)) 
 ```
 
     (Intercept)    species1    species2 
@@ -91,10 +199,10 @@ an incorrect conclusion about the difference between groups.
 
 ``` r
 # What if we accidentally typed 1/3 instead of 2/3?
-contrasts(penguins_df$species) <- matrix(c(-1/3, 1/3, -1/3,
-                                           -1/3, -1/3, 2/3),
-                                         nrow = 3)
-coef(lm(bill_length_mm ~ species, data = penguins_df)) # Scaled sum coding
+contrasts(penguins_with_contrasts$species) <- matrix(c(-1/3, 1/3, -1/3,
+                                                       -1/3, -1/3, 2/3),
+                                                     nrow = 3)
+coef(lm(bill_length_mm ~ species, data = penguins_with_contrasts))
 ```
 
     (Intercept)    species1    species2 
@@ -102,11 +210,16 @@ coef(lm(bill_length_mm ~ species, data = penguins_df)) # Scaled sum coding
 
 Here we can see that the intercept and the value for `species1` has changed.
 To what though??
+What does the new coefficient estimate represent?
+
+### Diagnosing our mistake
+
 To check what these numbers correspond to, we have to check the
 *hypothesis matrix* that corresponds to our *contrast matrix*.
 The process of obtaining the hypothesis matrix has been referred to as finding
-the generalized inverse of the contrast matrix, see (vasisth's paper) for
-details.
+the generalized inverse of the contrast matrix, see
+[https://www.sciencedirect.com/science/article/pii/S0749596X19300695](Schad%20et%20al.%202020)
+for more details.
 
 ``` r
 matrix(c(1, 1, 1,         # Add a column of 1s for the intercept
@@ -116,7 +229,7 @@ matrix(c(1, 1, 1,         # Add a column of 1s for the intercept
        dimnames = list(NULL, c('Intercept', 'species1', 'species2'))) |> 
   t() |> 
   solve() |> 
-  MASS::fractions()
+  MASS::fractions() # This function just shows numbers as fractions
 ```
 
          Intercept species1 species2
@@ -126,7 +239,11 @@ matrix(c(1, 1, 1,         # Add a column of 1s for the intercept
 
 Here the intercept is represented by the weighted sum of each group mean,
 where the weights are shown in the intercept column.
-We can double check this ourselves:
+In most cases, the intercept should reflect the grand mean, or the mean of the
+group means, and so would usually have equal weights (i.e., `1/3` here) for the
+levels.
+In this case, we see the fractional weights are not the same.
+We can verify this by calculating the weighted mean ourselves:
 
 ``` r
 group_means <- 
@@ -172,24 +289,44 @@ group_means[['Chinstrap']] - group_means[['Adelie']]
 
 Point being: we made an honest mistake of typing `1/3` instead of `2/3` but
 this had ramifications for the coefficients in our model output that we use
-to make inferences. If we saw the coveted `***` for our significance test,
-we might not think to double check ourselves because we would believe that
-our setup was done correctly.
+to make inferences.
+In practice, because we did the multiple `contrasts<-` calls, we would likely
+assume that what we did was correct in the absence of any errors.
 
-## Contrastable
+## Tidy approach to contrasts
 
 Here I'll show a different approach using the `contrastable` package.
-This package takes a more tidy approach to take care of the overhead of
+This package takes a tidy approach to take care of the overhead of
 labels and reference levels involved when using common contrast coding schemes.
+Specifically, this package provides a series of functions that use a special
+formula implementation that assigns specific meanings to each operator.
+The left hand side of the formula is the factor column whose contrasts
+you want to change.
+The right hand side consists of (at minimum) a function to generate contrast
+matrices such as `contr.treatment` or `treatment_code`.
+Additional operators provide extra optional functionality:
+
+-   `+ x`: Set reference level to level `x`
+-   `* x`: Set intercept to be the mean of `x`
+-   `- 3:4`: For polynomial contrasts only, drop trends `3` and `4`
+-   `| c("A-B", "A-C")`: Set the comparison labels to `A-B` and `A-C` (must be
+    the last operator if used)
+
+Recall that in many cases researchers want pairwise comparisons while retaining
+main effects, and so the choice of reference level for the comparisons is
+very important.
+By default, R uses the first level alphabetically as the reference level,
+but sometimes we want to change this manually ourselves.
 Here's an example where we set the `sex` and `species` factors to the two
 contrast schemes we manually set before.
+The `set_contrasts` function will show a message if it detects additional
+factor variables in the dataframe that the user did not provide contrasts for.
 
 ``` r
-library(contrastable)
-
+# library(contrastable) was loaded earlier
 penguins_df <- 
   penguins |> 
-  set_contrasts(sex ~ scaled_sum_code + "female", # Set reference level with +
+  set_contrasts(sex ~ scaled_sum_code + "male", # Set reference level with +
                 species ~ scaled_sum_code + 'Adelie') 
 ```
 
@@ -208,27 +345,46 @@ contrasts(penguins_df$species) |> MASS::fractions()
 contrasts(penguins_df$sex) |> MASS::fractions()
 ```
 
-           male
-    female -1/2
-    male    1/2
+           female
+    female  1/2  
+    male   -1/2  
 
-`penguins_df` now has all of its contrasts set, so we can run our model again.
+`penguins_df` now has its contrasts set, and we can run our model as usual.
+Note that we didn't have to type out any matrices ourselves, but we got the
+correct contrasts that we needed.
 
 ``` r
+coef(lm(bill_length_mm ~ species + bill_depth_mm, data = penguins_df))
+```
+
+         (Intercept) speciesChinstrap    speciesGentoo    bill_depth_mm 
+           20.997115         9.938955        13.403279         1.394011 
+
+If we wanted to change the labels to better reflect the comparisons being
+made, we could do that in the formula too.
+
+``` r
+penguins_df <- 
+  penguins_df |> 
+  set_contrasts(species ~ scaled_sum_code + 'Adelie' | c('Chin-Ad', 'Gen-Ad'))
+
 coef(lm(bill_length_mm ~ species, data = penguins_df))
 ```
 
-         (Intercept) speciesChinstrap    speciesGentoo 
-           45.043364        10.042433         8.713487 
+       (Intercept) speciesChin-Ad  speciesGen-Ad 
+         45.043364      10.042433       8.713487 
+
+### Additional functions
 
 Typically when I use this package in my analyses the `set_contrasts` function
-previously is what I usually use, but there are other functions that follow
+is all I really need, but there are other functions that follow
 the same syntax that provide other information.
 To avoid retyping things, I'll usually keep the contrasts in a list assigned
 to a separate variable and pass that to functions.
 
 The `glimpse_contrasts` function can show information about the factors
-in a dataset along with the contrasts that have been assigned to each factor.
+in a dataset along with the contrast schemes that have been assigned to each
+factor.
 
 ``` r
 my_contrasts <- 
@@ -240,12 +396,12 @@ my_contrasts <-
 glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
 ```
 
-<div id="nrusehwxnl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jyhtxllnpf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#nrusehwxnl .gt_table {
+#jyhtxllnpf .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -270,7 +426,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-left-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_heading {
+#jyhtxllnpf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -282,7 +438,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-right-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_title {
+#jyhtxllnpf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -294,7 +450,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-bottom-width: 0;
 }
 
-#nrusehwxnl .gt_subtitle {
+#jyhtxllnpf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -306,13 +462,13 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-top-width: 0;
 }
 
-#nrusehwxnl .gt_bottom_border {
+#jyhtxllnpf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_col_headings {
+#jyhtxllnpf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -327,7 +483,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-right-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_col_heading {
+#jyhtxllnpf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -347,7 +503,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   overflow-x: hidden;
 }
 
-#nrusehwxnl .gt_column_spanner_outer {
+#jyhtxllnpf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -359,15 +515,15 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   padding-right: 4px;
 }
 
-#nrusehwxnl .gt_column_spanner_outer:first-child {
+#jyhtxllnpf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nrusehwxnl .gt_column_spanner_outer:last-child {
+#jyhtxllnpf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nrusehwxnl .gt_column_spanner {
+#jyhtxllnpf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -379,7 +535,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   width: 100%;
 }
 
-#nrusehwxnl .gt_group_heading {
+#jyhtxllnpf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -404,7 +560,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   vertical-align: middle;
 }
 
-#nrusehwxnl .gt_empty_group_heading {
+#jyhtxllnpf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -419,15 +575,15 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   vertical-align: middle;
 }
 
-#nrusehwxnl .gt_from_md > :first-child {
+#jyhtxllnpf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nrusehwxnl .gt_from_md > :last-child {
+#jyhtxllnpf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nrusehwxnl .gt_row {
+#jyhtxllnpf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -446,7 +602,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   overflow-x: hidden;
 }
 
-#nrusehwxnl .gt_stub {
+#jyhtxllnpf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -459,7 +615,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   padding-right: 5px;
 }
 
-#nrusehwxnl .gt_stub_row_group {
+#jyhtxllnpf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -473,11 +629,11 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   vertical-align: top;
 }
 
-#nrusehwxnl .gt_row_group_first td {
+#jyhtxllnpf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nrusehwxnl .gt_summary_row {
+#jyhtxllnpf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -487,16 +643,16 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   padding-right: 5px;
 }
 
-#nrusehwxnl .gt_first_summary_row {
+#jyhtxllnpf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_first_summary_row.thick {
+#jyhtxllnpf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nrusehwxnl .gt_last_summary_row {
+#jyhtxllnpf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -506,7 +662,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-bottom-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_grand_summary_row {
+#jyhtxllnpf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -516,7 +672,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   padding-right: 5px;
 }
 
-#nrusehwxnl .gt_first_grand_summary_row {
+#jyhtxllnpf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -526,11 +682,11 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-top-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_striped {
+#jyhtxllnpf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nrusehwxnl .gt_table_body {
+#jyhtxllnpf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -539,7 +695,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-bottom-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_footnotes {
+#jyhtxllnpf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -553,7 +709,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-right-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_footnote {
+#jyhtxllnpf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -562,7 +718,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   padding-right: 5px;
 }
 
-#nrusehwxnl .gt_sourcenotes {
+#jyhtxllnpf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -576,7 +732,7 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   border-right-color: #D3D3D3;
 }
 
-#nrusehwxnl .gt_sourcenote {
+#jyhtxllnpf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -584,36 +740,36 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   padding-right: 5px;
 }
 
-#nrusehwxnl .gt_left {
+#jyhtxllnpf .gt_left {
   text-align: left;
 }
 
-#nrusehwxnl .gt_center {
+#jyhtxllnpf .gt_center {
   text-align: center;
 }
 
-#nrusehwxnl .gt_right {
+#jyhtxllnpf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nrusehwxnl .gt_font_normal {
+#jyhtxllnpf .gt_font_normal {
   font-weight: normal;
 }
 
-#nrusehwxnl .gt_font_bold {
+#jyhtxllnpf .gt_font_bold {
   font-weight: bold;
 }
 
-#nrusehwxnl .gt_font_italic {
+#jyhtxllnpf .gt_font_italic {
   font-style: italic;
 }
 
-#nrusehwxnl .gt_super {
+#jyhtxllnpf .gt_super {
   font-size: 65%;
 }
 
-#nrusehwxnl .gt_two_val_uncert {
+#jyhtxllnpf .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -622,31 +778,31 @@ glimpse_contrasts(penguins_df, my_contrasts) |> gt::gt()
   margin-left: 0.1em;
 }
 
-#nrusehwxnl .gt_footnote_marks {
+#jyhtxllnpf .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#nrusehwxnl .gt_asterisk {
+#jyhtxllnpf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nrusehwxnl .gt_slash_mark {
+#jyhtxllnpf .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#nrusehwxnl .gt_fraction_numerator {
+#jyhtxllnpf .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#nrusehwxnl .gt_fraction_denominator {
+#jyhtxllnpf .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
