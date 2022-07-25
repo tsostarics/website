@@ -15,4 +15,4 @@ date_end: ""
 type: publication
 ---
 
-<b>Sostarics, Thomas</b> (2021). Pragmatic Contributions of the L*L-L% Contour in American English. Language Evolution, Acquisition, and Processing Workshop. The University of Chicago.
+Sostarics, Thomas (2021). Pragmatic Contributions of the L*L-L% Contour in American English. Language Evolution, Acquisition, and Processing Workshop. The University of Chicago.
