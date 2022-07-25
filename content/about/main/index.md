@@ -1,9 +1,9 @@
 ---
 ## Configure page content in wide column
 title: "Bio" # leave blank to exclude
-number_featured: 1 # pulling from mainSections in config.toml
+number_featured:  # pulling from mainSections in config.toml
 use_featured: false # if false, use most recent by date
-number_categories: 3 # set to zero to exclude
+number_categories: 0 # set to zero to exclude
 show_intro: true
 intro: |
   I am a PhD student in Linguistics at Northwestern University interested in prosody, pragmatics, phonetics, and aphasia. My research focuses on data-driven experimental approaches to understanding intonational meaning in American English. Adjacent to my research, I am interested in R package development, ordinal data analysis, data visualization, and experimental design. Outside of my research, I enjoy horror movies, graphic design, biking, and taking photos of cities. My website uses photos I've taken from around Chicago and Japan.
