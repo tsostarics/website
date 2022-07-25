@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.tsostarics.com"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Thomas Sostarics"
@@ -110,7 +110,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Posts"
     title = "Posts"
-    url = "/blog/"
+    url = "https://tsostaricsblog.netlify.app"
     weight = 2
   [[menu.header]]
     name = "Research"
@@ -129,11 +129,6 @@ enableEmoji = true
     title = "Contact form"
     url = "/contact/"
     weight = 2
-  [[menu.footer]]
-    name = "Contributors"
-    title = "Contributors"
-    url = "/contributors/"
-    weight = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
