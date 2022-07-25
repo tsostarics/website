@@ -94,6 +94,18 @@ enableEmoji = true
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://twitter.com/t_sostarics"
+  [[params.social]]
+      icon      = "google-scholar"
+      icon_pack = "ai"
+      url       = "https://scholar.google.com/citations?user=EmzrX64AAAAJ"
+  [[params.social]]
+      icon      = "osf"
+      icon_pack = "ai"
+      url       = "https://osf.io/bmdnw"
+  [[params.social]]
+      icon      = "linkedin"
+      icon_pack = "fab"
+      url       = "https://www.linkedin.com/in/tsostarics/"
 
 [taxonomies]
   category = "categories"
