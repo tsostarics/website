@@ -2,77 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.tsostarics.com/collection/day02/01-netlify/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/day01/01-github/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/prework/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/day01/</loc>
-    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/day01/02-postcards/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/day02/02-blogdown/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/day02/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/day01/03-distill/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/day02/03-blogdown/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/collection/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/project/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/categories/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/tags/hugo-site/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/categories/package/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/categories/r/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/project/giraffes/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/tags/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/categories/theme-features/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/project/penguins/</loc>
-    <lastmod>2019-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.tsostarics.com/project/bakeoff/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.tsostarics.com/contact/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
   </url><url>
     <loc>https://www.tsostarics.com/form/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
   </url><url>
-    <loc>https://www.tsostarics.com/elements/</loc>
-    <lastmod>2019-02-18T12:27:33-06:00</lastmod>
+    <loc>https://www.tsostarics.com/</loc>
+    <lastmod>2019-02-25T13:38:41-06:00</lastmod>
   </url><url>
     <loc>https://www.tsostarics.com/research/2020_snl/</loc>
   </url><url>
@@ -84,11 +21,15 @@
   </url><url>
     <loc>https://www.tsostarics.com/research/2021_midphon/</loc>
   </url><url>
+    <loc>https://www.tsostarics.com/categories/</loc>
+  </url><url>
     <loc>https://www.tsostarics.com/categories/conference-talk/</loc>
   </url><url>
     <loc>https://www.tsostarics.com/contributors/</loc>
   </url><url>
     <loc>https://www.tsostarics.com/research/2022_tai/</loc>
+  </url><url>
+    <loc>https://www.tsostarics.com/research/2022_midphon/</loc>
   </url><url>
     <loc>https://www.tsostarics.com/categories/invited-talk/</loc>
   </url><url>
@@ -103,6 +44,8 @@
     <loc>https://www.tsostarics.com/research/</loc>
   </url><url>
     <loc>https://www.tsostarics.com/series/</loc>
+  </url><url>
+    <loc>https://www.tsostarics.com/tags/</loc>
   </url><url>
     <loc>https://www.tsostarics.com/research/2022_lsa/</loc>
   </url>
