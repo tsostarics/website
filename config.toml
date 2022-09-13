@@ -116,7 +116,7 @@ enableEmoji = true
   # Configure header
   [[menu.header]]
     name = "About"
-    title = "About Blogophonic"
+    title = "About Me"
     url = "/about/"
     weight = 1
   [[menu.header]]
@@ -129,6 +129,11 @@ enableEmoji = true
     title = "Research"
     url = "/research/"
     weight = 3
+  [[menu.header]]
+    name = "CV"
+    title = "CV"
+    url = "Sostarics_CV.pdf"
+    weight = 4
 
   # Configure footer
   [[menu.footer]]
