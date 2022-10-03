@@ -27,6 +27,12 @@ sidebar:
     and visit related links such as osf materials and github code.
     Pages are listed in chronological order, and you can click the title of
     the work for additional descriptions and full citation entries.
+
+    ***Manuscripts in progress***:
+
+    **Sostarics, Thomas** and Cole, Jennifer. *The Pragmatics of the LLL Tune in American English* (working title). Expected to submit 2022 Q4 - 2021 Q1.
+
+    Walenski, Matthew and **Sostarics, Thomas** and Mesulam, M. Marsel and Thompson, Cynthia K. *Adjective Use by Individuals with Agrammatic Primary Progressive Aphasia*. Expected to submit 2022 Q4.
   show_sidebar_adunit: false
   title: Research Output
 title: Research Output
