@@ -13,6 +13,19 @@ location: "Prague, Czech Republic"
 journal: ""
 date: "8/7/2023"
 date_end: "8/11/2023"
+links:
+  - icon:  osf
+    icon_pack:  ai
+    name: osf
+    url: https://osf.io/8hrfv/
+  - icon:  github
+    icon_pack:  fab
+    name: code
+    url: https://github.com/tsostarics/icphs_asa_2023
+  - icon:  file-pdf
+    icon_pack:  fas
+    name: pdf
+    url: /research/2023_icphs/sostaricscole_icphs2023.pdf
 type: publication
 ---
 
