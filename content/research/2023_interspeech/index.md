@@ -26,6 +26,10 @@ links:
     icon_pack:  fas
     name: pdf
     url: /research/2023_interspeech/SostaricsCole_Interspeech2023.pdf
+  - icon:  file-powerpoint
+    icon_pack:  fas
+    name: slides
+    url: /research/2023_interspeech/SostaricsCole_Slides.pdf
 type: publication
 ---
 

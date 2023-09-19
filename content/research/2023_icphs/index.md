@@ -26,6 +26,10 @@ links:
     icon_pack:  fas
     name: pdf
     url: /research/2023_icphs/sostaricscole_icphs2023.pdf
+  - icon:  chalkboard-teacher
+    icon_pack:  fas
+    name: poster
+    url: /research/2023_icphs/sostaricscole_icphs_poster.pdf
 type: publication
 ---
 
