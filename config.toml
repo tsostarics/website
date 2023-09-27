@@ -132,7 +132,7 @@ enableEmoji = true
   [[menu.header]]
     name = "CV"
     title = "CV"
-    url = "../Sostarics_CV.pdf"
+    url = "https://www.tsostarics.com/Sostarics_CV.pdf"
     weight = 4
 
   # Configure footer
