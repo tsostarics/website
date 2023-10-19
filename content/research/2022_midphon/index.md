@@ -25,3 +25,5 @@ Sostarics, Thomas; Cole, Jennifer (2022). Exploring the Voice Quality of Nuclear
 Poster available as a high-definition PNG file. The original PDF has a lot of geometry from the faceted graphs, and as a result has a tendency to crash PDF viewers.
 
 On the poster, there are flags with numbers. Flags on the left column of the poster (<i class="fas fa-flag"></i>) denote specific goals/questions. Match the number on these flags with those of the flags on the right side of the poster (<i class="fas fa-flag fa-flip-horizontal"></i>) for the observations from the data that address each question. 
+
+Design inspirations: Flags. Toothpicks. Larynx. Cat's cradle. Overlay windows.

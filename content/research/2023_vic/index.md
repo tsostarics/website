@@ -20,4 +20,6 @@ links:
 type: publication
 ---
 
+Design inspirations: Building blocks. Wool. Waves. Recycling. Circular menus.
+
 Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer (2023). Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective. Voices in Contexts Workshop. University of Cologne, Germany.

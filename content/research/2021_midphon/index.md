@@ -24,4 +24,6 @@ links:
 type: publication
 ---
 
+Design inspirations: Toothpaste. Sinusoids.
+
 Sostarics, Thomas; Cole, Jennifer (2021). Assessing Contrasts in Intonation Through Contrasts in Speaker Commitment. 26th Midcontinental Phonetics and Phonology Conference. The University of Chicago.

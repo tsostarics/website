@@ -36,4 +36,6 @@ type: publication
 
 ***1st Place Best Paper in Speech Communication Award***
 
+Design inspirations: Magenta. Flattening. Kirby. ASA color palette. Name tags.
+
 Sostarics, T., & Cole, J. (2023). Tonal center of gravity predicts variation in the interpretation of rising and falling intonation in American English. The Journal of the Acoustical Society of America, 153(3_supplement), A78–A78. https://doi.org/10.1121/10.0018225

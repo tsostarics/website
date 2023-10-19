@@ -24,4 +24,6 @@ links:
 type: publication
 ---
 
+Design inspirations: Bust a Move. Rubiks cubes. iMessage.
+
 Sostarics, Thomas; Cole, Jennifer (2023). Accommodation of Rising and Falling Intonation in American English. 28th Midcontinental Phonetics and Phonology Conference. Purdue University.

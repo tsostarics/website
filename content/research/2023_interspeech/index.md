@@ -37,4 +37,6 @@ links:
 type: publication
 ---
 
+Design inspirations: Building blocks. Cat's cradle. Jigsaw puzzles.
+
 Sostarics, T., & Cole, J. (2023). Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English.  Proceedings of Interspeech 2023.

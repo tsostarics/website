@@ -24,4 +24,6 @@ links:
 type: publication
 ---
 
+Design inspirations: Stacks.
+
 Sostarics, Thomas; Cole, Jennifer (2022). What listeners can tell us about epistemic meaning and the LLL tune in American English. 96th Annual Meeting of the Linguistic Society of America. Washington D.C., United States.
