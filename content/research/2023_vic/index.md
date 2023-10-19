@@ -11,13 +11,13 @@ event_url: "https://sfb1252.uni-koeln.de/veranstaltungen/workshop-voices-in-cont
 location: "Cologne, Germany"
 journal: ""
 date: "10/12/2023"
-date_end: "13-Oct"
+date_end: "10/13/2023"
 links:
   - icon:  file-powerpoint
     icon_pack:  fas
     name: slides
-    url: /research/2023_vic/Sostarics_slides.pdf
+    url: /research/2023_vic/Sostarics_vic_slides.pdf
 type: publication
 ---
 
-Sostarics, T., & Cole, J. (2023). Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English.  Proceedings of Interspeech 2023.
+Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer (2023). Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective. Voices in Contexts Workshop. University of Cologne, Germany.

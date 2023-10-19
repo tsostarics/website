@@ -30,6 +30,10 @@ links:
     icon_pack:  fas
     name: poster
     url: /research/2023_icphs/sostaricscole_icphs_poster.pdf
+  - icon:  bookmark
+    icon_pack:  fas
+    name: bibtex
+    url: /research/2023_icphs/sostaricscole23_icphs.bibtex
 type: publication
 ---
 

@@ -30,7 +30,11 @@ links:
     icon_pack:  fas
     name: slides
     url: /research/2023_interspeech/SostaricsCole_Slides.pdf
+  - icon:  bookmark
+    icon_pack:  fas
+    name: bibtex
+    url: /research/2023_interspeech/sostaricscole23_interspeech.bibtex
 type: publication
 ---
 
-
+Sostarics, T., & Cole, J. (2023). Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English.  Proceedings of Interspeech 2023.
