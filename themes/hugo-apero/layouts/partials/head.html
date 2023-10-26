@@ -1,7 +1,5 @@
 <head>
-    {{ if .Site.Params.googleAnalytics }}
-    {{ partial "analytics-gtag.html" . }}
-    {{ end }}
+  {{ template "_internal/google_analytics.html" . }}
   {{ partial "meta.html" . }}
   {{ template "_internal/schema.html" . }}
   {{ `<!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->` | safeHTML }}
