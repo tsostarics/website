@@ -31,6 +31,10 @@ links:
     icon_pack:  fas
     name: bibtex
     url: /research/2023_asa/sostaricscole_asa2023.bib
+  - icon:  doi
+    icon_pack:  ai
+    name: doi
+    url: https://doi.org/10.1121/10.0018225
 type: publication
 ---
 

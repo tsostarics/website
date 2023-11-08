@@ -34,6 +34,10 @@ links:
     icon_pack:  fas
     name: bibtex
     url: /research/2023_interspeech/sostaricscole23_interspeech.bibtex
+  - icon:  doi
+    icon_pack:  ai
+    name: doi
+    url: /research/2023_interspeech/doi:10.21437/ Interspeech.2023-315
 type: publication
 ---
 

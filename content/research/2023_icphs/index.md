@@ -37,6 +37,4 @@ links:
 type: publication
 ---
 
-Design inspirations: Riemann sums. Halftone patterns. Northwestern purple & ICPhS blue. Whiteboards. Handwriting.
-
-Sostarics, T., Cole, J. (2023) Testing the Locus of Speech-Act Meaning in English Intonation. Proc. International Congress of Phonetic Sciences (ICPhS).
+Design inspirations: Riemann sums. Halftone patterns. Northwestern purple & ICPhS blue. Whiteboards. Handwriting. Sostarics, T., Cole, J. (2023) Testing the Locus of Speech-Act Meaning in English Intonation. Proc. International Congress of Phonetic Sciences (ICPhS).

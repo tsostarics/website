@@ -30,9 +30,14 @@ links:
     icon_pack:  fas
     name: bibtex
     url: /research/2022_tai/sostarics21.bib
+  - icon:  doi
+    icon_pack:  ai
+    name: doi
+    url: /research/2022_tai/doi:10.21437/TAI.2021-3
 type: publication
 ---
 
 Design inspirations: Ribbons.
 
 Sostarics, T., Cole, J. (2021) Epistemic Meaning and the LLL Tune in American English. Proc. 1st International Conference on Tone and Intonation (TAI), 11-15, doi: 10.21437/TAI.2021-3
+

@@ -56,13 +56,15 @@ make_link_button <- function(citation, arg, cite_dir, link_section) {
                  bibtex = "fas",
                  code = "fab",
                  poster = "fas",
-                 slides = "fas")
+                 slides = "fas",
+                 doi = "ai")
   icon <- c(osf = "osf",
             pdf = "file-pdf",
             bibtex = "bookmark",
             code = "github",
             poster = "chalkboard-teacher",
-            slides = "file-powerpoint")
+            slides = "file-powerpoint",
+            doi = "doi")
   # Check if this is a file, if so append the citation directory
   linkval <-
     ifelse(
