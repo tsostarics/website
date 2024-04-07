@@ -1,4 +1,4 @@
-baseURL = "https://www.tsostarics.com"
+baseURL = "https://www.tsostarics.com/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Thomas Sostarics"

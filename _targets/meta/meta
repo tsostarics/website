@@ -2,7 +2,7 @@ name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iterat
 <<<<<<< HEAD|||||||||||||||||
 =======|||||||||||||||||
 >>>>>>> 0cb7125a5f9161f1c61b7c8d2be44d1a6fb05e30|||||||||||||||||
-citations_path|stem|3539ce31b02fb565|231ebfec381d575e|ef46db3751d8e999|407386866|citations.csv|t19820.6371225403s|824cc350fb96d544|10014|file|local|vector|||0||
+citations_path|stem|3539ce31b02fb565|231ebfec381d575e|ef46db3751d8e999|407386866|citations.csv|t19820.6432777972s|824cc350fb96d544|10014|file|local|vector|||0||
 create_citation_index|function|55d1132f757b5215|||||||||||||||
 fix_quotes|pattern|01ac2c72dd206bac|25f9c2ff561dc578||711270577||||86|rds|local|vector||fix_quotes_e2715d18*fix_quotes_0680e7e8*fix_quotes_a5f4258c|0.02||
 fix_quotes_0680e7e8|branch|41c08db886f34be3|25f9c2ff561dc578|265c7e1ddd08ea49|-2017866963||t19186.762841025s|44e327d1ee1978d7|43|rds|local|vector|fix_quotes||0||
