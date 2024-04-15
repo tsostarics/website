@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Journal Article on Thomas Sostarics</title>
-    <link>http://localhost:4321/categories/journal-article/</link>
-    <description>Recent content in Journal Article on Thomas Sostarics</description>
+    <title>journal article on Thomas Sostarics</title>
+    <link>https://www.tsostarics.com/categories/journal-article/</link>
+    <description>Recent content in journal article on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <atom:link href="http://localhost:4321/categories/journal-article/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://www.tsostarics.com/categories/journal-article/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The production of adjectives in narratives by individuals with primary progressive aphasia</title>
-      <link>http://localhost:4321/research/2024_aphasiajofnlx/</link>
+      <link>https://www.tsostarics.com/research/2024_aphasiajofnlx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2024_aphasiajofnlx/</guid>
+      
+      <guid>https://www.tsostarics.com/research/2024_aphasiajofnlx/</guid>
       <description>Walenski, M., Sostarics, T., Mesulam, M. M., &amp;amp; Thompson, C. K. (2024). The production of adjectives in narratives by individuals with primary progressive aphasia. Journal of Neurolinguistics, 69, 101179. doi:https://doi.org/10.1016/j.jneuroling.2023.101179.</description>
     </item>
+    
   </channel>
 </rss>
