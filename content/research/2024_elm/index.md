@@ -6,8 +6,7 @@ categories:
   - proceedings
   -  conference talk
 excerpt: "(Proceedings Paper, Oral Presentation)"
-title: "Relating Scalar Inference and Alternative
-Activation: A View from the Rise-Fall-Rise Tune in American English"
+title: "Relating Scalar Inference and Alternative Activation: A View from the Rise-Fall-Rise Tune in American English"
 event: "Experiments in Linguistic Meaning 3"
 event_url: "https://www.elm-conference.net/archive/elm-3-2024/"
 location: "Philadelphia, PA"

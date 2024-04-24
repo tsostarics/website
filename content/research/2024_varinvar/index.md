@@ -1,7 +1,6 @@
 ---
 author: Thomas Sostarics
 year: "2024"
-month: "6"
 subtitle: "Iskarous, Khalil*; Cole, Jennifer; Sostarics, Thomas"
 categories:
   - conference talk

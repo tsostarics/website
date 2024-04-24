@@ -1,77 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>conference talk on Thomas Sostarics</title>
-    <link>https://www.tsostarics.com/categories/conference-talk/</link>
-    <description>Recent content in conference talk on Thomas Sostarics</description>
+    <title>Conference Talk on Thomas Sostarics</title>
+    <link>http://localhost:4321/categories/conference-talk/</link>
+    <description>Recent content in Conference Talk on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://www.tsostarics.com/categories/conference-talk/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:4321/categories/conference-talk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adjective use by individuals with agrammatic primary progressive aphasia</title>
-      <link>https://www.tsostarics.com/research/2020_aoa/</link>
+      <link>http://localhost:4321/research/2020_aoa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/research/2020_aoa/</guid>
+      <guid>http://localhost:4321/research/2020_aoa/</guid>
       <description>Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K (2020). Adjective use by individuals with agrammatic primary progressive aphasia. Academy of Aphasia 2020.</description>
     </item>
-    
     <item>
       <title>Assessing Contrasts in Intonation Through Contrasts in Speaker Commitment</title>
-      <link>https://www.tsostarics.com/research/2021_midphon/</link>
+      <link>http://localhost:4321/research/2021_midphon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/research/2021_midphon/</guid>
-      <description>Design inspirations: Toothpaste. Sinusoids.
-Sostarics, Thomas; Cole, Jennifer (2021). Assessing Contrasts in Intonation Through Contrasts in Speaker Commitment. 26th Midcontinental Phonetics and Phonology Conference. The University of Chicago.</description>
+      <guid>http://localhost:4321/research/2021_midphon/</guid>
+      <description>Design inspirations: Toothpaste. Sinusoids.&#xA;Sostarics, Thomas; Cole, Jennifer (2021). Assessing Contrasts in Intonation Through Contrasts in Speaker Commitment. 26th Midcontinental Phonetics and Phonology Conference. The University of Chicago.</description>
     </item>
-    
     <item>
       <title>Intonational tunes as compositional, but also autonomous, dynamical objects</title>
-      <link>https://www.tsostarics.com/research/2024_varinvar/</link>
+      <link>http://localhost:4321/research/2024_varinvar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/research/2024_varinvar/</guid>
+      <guid>http://localhost:4321/research/2024_varinvar/</guid>
       <description>Iskarous, K., Cole, J., &amp;amp; Sostarics, T. (2024). Intonational tunes as compositional, but also autonomous, dynamical objects. Oral presentation at Variance and invariance in phonological representation: Insights from articulation workshop, Laboratory Phonology 19</description>
     </item>
-    
     <item>
       <title>Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English</title>
-      <link>https://www.tsostarics.com/research/2023_interspeech/</link>
+      <link>http://localhost:4321/research/2023_interspeech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/research/2023_interspeech/</guid>
-      <description>Design inspirations: Building blocks. Cat&amp;rsquo;s cradle. Jigsaw puzzles.
-Sostarics, T., &amp;amp; Cole, J. (2023). Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English. Proceedings of Interspeech 2023.</description>
+      <guid>http://localhost:4321/research/2023_interspeech/</guid>
+      <description>Design inspirations: Building blocks. Cat&amp;rsquo;s cradle. Jigsaw puzzles.&#xA;Sostarics, T., &amp;amp; Cole, J. (2023). Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English. Proceedings of Interspeech 2023.</description>
     </item>
-    
     <item>
       <title>Relating Scalar Inference and Alternative Activation: A View from the Rise-Fall-Rise Tune in American English</title>
-      <link>https://www.tsostarics.com/research/2024_elm/</link>
+      <link>http://localhost:4321/research/2024_elm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/research/2024_elm/</guid>
+      <guid>http://localhost:4321/research/2024_elm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective</title>
-      <link>https://www.tsostarics.com/research/2023_vic/</link>
+      <link>http://localhost:4321/research/2023_vic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/research/2023_vic/</guid>
-      <description>Design inspirations: Building blocks. Wool. Waves. Ink. あんたへ。Recycling. Circular menus.
-Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer (2023). Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective. Voices in Contexts Workshop. University of Cologne, Germany.</description>
+      <guid>http://localhost:4321/research/2023_vic/</guid>
+      <description>Design inspirations: Building blocks. Wool. Waves. Ink. あんたへ。Recycling. Circular menus.&#xA;Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer (2023). Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective. Voices in Contexts Workshop. University of Cologne, Germany.</description>
     </item>
-    
     <item>
       <title>What listeners can tell us about epistemic meaning and the LLL tune in American English</title>
-      <link>https://www.tsostarics.com/research/2022_lsa/</link>
+      <link>http://localhost:4321/research/2022_lsa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/research/2022_lsa/</guid>
-      <description>Design inspirations: Stacks.
-Sostarics, Thomas; Cole, Jennifer (2022). What listeners can tell us about epistemic meaning and the LLL tune in American English. 96th Annual Meeting of the Linguistic Society of America. Washington D.C., United States.</description>
+      <guid>http://localhost:4321/research/2022_lsa/</guid>
+      <description>Design inspirations: Stacks.&#xA;Sostarics, Thomas; Cole, Jennifer (2022). What listeners can tell us about epistemic meaning and the LLL tune in American English. 96th Annual Meeting of the Linguistic Society of America. Washington D.C., United States.</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,54 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Thomas Sostarics</title>
-    <link>https://www.tsostarics.com/categories/</link>
+    <link>http://localhost:4321/categories/</link>
     <description>Recent content in Categories on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://www.tsostarics.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:4321/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>conference talk</title>
-      <link>https://www.tsostarics.com/categories/conference-talk/</link>
+      <title>Conference Talk</title>
+      <link>http://localhost:4321/categories/conference-talk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/categories/conference-talk/</guid>
+      <guid>http://localhost:4321/categories/conference-talk/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>invited talk</title>
-      <link>https://www.tsostarics.com/categories/invited-talk/</link>
+      <title>Invited Talk</title>
+      <link>http://localhost:4321/categories/invited-talk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/categories/invited-talk/</guid>
+      <guid>http://localhost:4321/categories/invited-talk/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>journal article</title>
-      <link>https://www.tsostarics.com/categories/journal-article/</link>
+      <title>Journal Article</title>
+      <link>http://localhost:4321/categories/journal-article/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/categories/journal-article/</guid>
+      <guid>http://localhost:4321/categories/journal-article/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>poster</title>
-      <link>https://www.tsostarics.com/categories/poster/</link>
+      <title>Poster</title>
+      <link>http://localhost:4321/categories/poster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/categories/poster/</guid>
+      <guid>http://localhost:4321/categories/poster/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>proceedings</title>
-      <link>https://www.tsostarics.com/categories/proceedings/</link>
+      <title>Proceedings</title>
+      <link>http://localhost:4321/categories/proceedings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.tsostarics.com/categories/proceedings/</guid>
+      <guid>http://localhost:4321/categories/proceedings/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
