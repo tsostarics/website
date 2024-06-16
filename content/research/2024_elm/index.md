@@ -13,6 +13,11 @@ location: "Philadelphia, PA"
 journal: ""
 date: "6/12/2024"
 date_end: "6/14/2024"
+links:
+  - icon:  file-powerpoint
+    icon_pack:  fas
+    name: slides
+    url: /research/2024_elm/Sostarics_ELM2024_slides.pdf
 type: publication
 ---
 
