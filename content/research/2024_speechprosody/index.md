@@ -26,6 +26,10 @@ links:
     icon_pack:  fas
     name: pdf
     url: /research/2024_speechprosody/SostaricsCole_SP2024.pdf
+  - icon:  chalkboard-teacher
+    icon_pack:  fas
+    name: poster
+    url: /research/2024_speechprosody/SostaricsCole_SP2024_poster.jpg
 type: publication
 ---
 
