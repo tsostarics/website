@@ -47,15 +47,15 @@
 
 
     
-        <meta property="og:image" content="http://localhost:4321/research/sidebar-listing-a.jpg" >
+        <meta property="og:image" content="http://localhost:4321/research/2024_aphasiajofnlx/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="http://localhost:4321/research/sidebar-listing-a.jpg" >
+        <meta name="twitter:image" content="http://localhost:4321/research/2024_aphasiajofnlx/featured.png" >
     
     
   <meta itemprop="name" content="The production of adjectives in narratives by individuals with primary progressive aphasia">
 <meta itemprop="description" content="Walenski, M., Sostarics, T., Mesulam, M. M., &amp; Thompson, C. K. (2024). The production of adjectives in narratives by individuals with primary progressive aphasia. Journal of Neurolinguistics, 69, 101179. doi:https://doi.org/10.1016/j.jneuroling.2023.101179.">
 
-<meta itemprop="wordCount" content="30">
+<meta itemprop="wordCount" content="30"><meta itemprop="image" content="http://localhost:4321/research/2024_aphasiajofnlx/featured.png" />
 <meta itemprop="keywords" content="" />
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -237,13 +237,24 @@
 	
 	
 	
-	window.onload = (function() {
-	        const imagePath = document.getElementById("siteImage").src
-        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
-        	document.getElementById("siteImage").src = darkPath
-    	});
+	
 
 	}
+
+  if (body.className == "dark-mode") {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  } else {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "a.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  }
+  
 
 </script>
 
@@ -280,7 +291,7 @@
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">The production of adjectives in narratives by individuals with primary progressive aphasia</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">Walenski, Matthew; Sostarics, Thomas; Mesulam, Marsel; Thompson, Cynthia</h4>
-        <p class="f6 measure lh-copy mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/journal-article">journal article</a> </p>
+        
         
       
         <div class="ph0 pt5">

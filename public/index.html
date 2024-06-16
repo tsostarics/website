@@ -51,7 +51,7 @@ I took the photos used throughout the site.
 
 
 
-<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="http://localhost:4321/img/cities-a.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="http://localhost:4321/img/cities-c.png"/>
 
   <meta itemprop="name" content="Thomas Sostarics">
 <meta itemprop="description" content="Hi, I am a PhD student in Linguistics at Northwestern University. 
@@ -240,13 +240,24 @@ I took the photos used throughout the site.
 	
 	
 	
-	window.onload = (function() {
-	        const imagePath = document.getElementById("siteImage").src
-        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
-        	document.getElementById("siteImage").src = darkPath
-    	});
+	
 
 	}
+
+  if (body.className == "dark-mode") {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  } else {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "a.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  }
+  
 
 </script>
 
@@ -363,11 +374,11 @@ I took the photos used throughout the site.
         <p class="f4 mt4 lh-copy">Hi, I am a PhD student in Linguistics at Northwestern University.
 This is my personal website where I host things related to my research, data science, and other projects.
 I took the photos used throughout the site.</p>
-        <a class="mt4 action text" href="/about">Read More &rarr;</a>
+        <a class="mt4 action text" href="/about/">Read More &rarr;</a>
       </div>
       <div class="tr w-50-l ml4">
       
-        <img class="mv0 w-70-m" src="img/cities-a.jpg" id="siteImage"/>
+        <img class="mv0 w-70-m" src="img/cities-c.png" id="siteImage"/>
       
       </div>
     </div>

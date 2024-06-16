@@ -1,6 +1,6 @@
 ---
 action_label: Read More &rarr;
-action_link: /about
+action_link: /about/
 action_type: text
 description: |
   Hi, I am a PhD student in Linguistics at Northwestern University. 
@@ -8,7 +8,7 @@ description: |
   I took the photos used throughout the site.
 image_left: true
 images:
-- img/cities-a.jpg
+- img/cities-c.png
 show_action_link: true
 show_social_links: true
 subtitle:

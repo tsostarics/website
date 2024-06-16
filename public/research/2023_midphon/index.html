@@ -238,13 +238,24 @@ Sostarics, Thomas; Cole, Jennifer (2023). Accommodation of Rising and Falling In
 	
 	
 	
-	window.onload = (function() {
-	        const imagePath = document.getElementById("siteImage").src
-        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
-        	document.getElementById("siteImage").src = darkPath
-    	});
+	
 
 	}
+
+  if (body.className == "dark-mode") {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  } else {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "a.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  }
+  
 
 </script>
 
@@ -281,7 +292,7 @@ Sostarics, Thomas; Cole, Jennifer (2023). Accommodation of Rising and Falling In
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">Accommodation of Rising and Falling Intonation in American English</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">Sostarics, Thomas and Cole, Jennifer</h4>
-        <p class="f6 measure lh-copy mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/poster">poster</a> </p>
+        
         
       
         <div class="ph0 pt5">

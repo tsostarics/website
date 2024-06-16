@@ -2,7 +2,7 @@
 author: Thomas Sostarics
 cascade:
   author: Thomas Sostarics
-  show_author_byline: true
+  show_author_byline: false
   show_comments: false
   show_post_date: false
   show_post_time: false
@@ -13,8 +13,8 @@ cascade:
   type: publication
 description: |
   This is a list for your talks, workshops, or other events with a time, date, and place.
-layout: list-sidebar
-show_author_byline: true
+layout: list-headerbar
+show_author_byline: false
 show_button_links: true
 show_post_date: false
 show_post_thumbnail: true

@@ -237,13 +237,24 @@
 	
 	
 	
-	window.onload = (function() {
-	        const imagePath = document.getElementById("siteImage").src
-        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
-        	document.getElementById("siteImage").src = darkPath
-    	});
+	
 
 	}
+
+  if (body.className == "dark-mode") {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  } else {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "a.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  }
+  
 
 </script>
 
@@ -280,7 +291,7 @@
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4"> Adjective use by individuals with agrammatic primary progressive aphasia</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K.</h4>
-        <p class="f6 measure lh-copy mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/poster">poster</a> </p>
+        
         
       
       <section class="event-details cf pt5-ns pt4">

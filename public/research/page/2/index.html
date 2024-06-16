@@ -73,7 +73,7 @@
   <script src="/main.min.efce3882ba562177fa9ad47ef0975ce8f8e459edbd9a26bf919bda0b9dcc52f3.js" type="text/javascript"></script>
 </head>
 <body>
-      <div class="grid-container list-sidebar">
+      <div class="grid-container list-headerbar">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
     <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="http://localhost:4321/" title="Home">
@@ -239,13 +239,24 @@
 	
 	
 	
-	window.onload = (function() {
-	        const imagePath = document.getElementById("siteImage").src
-        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
-        	document.getElementById("siteImage").src = darkPath
-    	});
+	
 
 	}
+
+  if (body.className == "dark-mode") {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  } else {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "a.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  }
+  
 
 </script>
 
@@ -277,8 +288,9 @@
 </header>
 
 
+
 <main class="page-main pa4 section" role="main">
-  <section class="blog-content mw7 center">
+  <section class="blog-content mw10 center">
     
     
     
@@ -296,13 +308,13 @@
   
   
   
-  <div class="flex flex-column flex-row-ns mb3 mb4-l">
-    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-30-ns">
+  <div class="flex flex-column flex-row-ns mb3-l">
+    <figure class="ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="/research/2021_midphon/" class="db">
         
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-70-ns pl3-ns">
+    <div class="flex flex-column w-100 w-90-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><b><a href="/research/2021_midphon/" class="db">Assessing Contrasts in Intonation Through Contrasts in Speaker Commitment</a></b></h1>
         
@@ -310,18 +322,15 @@
       
       
       
-      <p class="f6 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Cole, Jennifer<br /></p>
+      <p class="f5 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Cole, Jennifer<br /></p>
       <footer class="w-100">
       
       
       
       
-        <span class="middot-divider"></span>
-        <p class="f7 dib mv1">26th Midcontinental Phonetics and Phonology Conference (Midphon 2021) / Chicago, IL</p>
+        <p class="f7 dib mv1"><i>@26th Midcontinental Phonetics and Phonology Conference (Midphon 2021) / Chicago, IL</i></p>
       
       <br />
-      
-        <p class="f7 dib mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/conference-talk">conference talk</a> </p>
       
       
         <p class="db pt1">
@@ -354,8 +363,9 @@
         </p>
       
     </footer>
-    </div>
   </div>
+      </div>
+
 
   
   
@@ -372,13 +382,13 @@
   
   
   
-  <div class="flex flex-column flex-row-ns mb3 mb4-l">
-    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-30-ns">
+  <div class="flex flex-column flex-row-ns mb3-l">
+    <figure class="ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="/research/2022_tai/" class="db">
         
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-70-ns pl3-ns">
+    <div class="flex flex-column w-100 w-90-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><b><a href="/research/2022_tai/" class="db">Epistemic meaning and the LLL tune in American English</a></b></h1>
         
@@ -386,18 +396,15 @@
       
       
       
-      <p class="f6 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Cole, Jennifer<br />(Proceedings Paper, Poster Presentation)</p>
+      <p class="f5 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Cole, Jennifer<br />(Proceedings Paper, Poster Presentation)</p>
       <footer class="w-100">
       
       
       
       
-        <span class="middot-divider"></span>
-        <p class="f7 dib mv1">1st International Conference on Tone and Intonation (TAI 2022) / Sonderborg, Denmark</p>
+        <p class="f7 dib mv1"><i>@1st International Conference on Tone and Intonation (TAI 2022) / Sonderborg, Denmark</i></p>
       
       <br />
-      
-        <p class="f7 dib mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/proceedings">proceedings</a>  <a href="http://localhost:4321/categories/poster">poster</a> </p>
       
       
         <p class="db pt1">
@@ -467,8 +474,9 @@
         </p>
       
     </footer>
-    </div>
   </div>
+      </div>
+
 
   
   
@@ -485,13 +493,13 @@
   
   
   
-  <div class="flex flex-column flex-row-ns mb3 mb4-l">
-    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-30-ns">
+  <div class="flex flex-column flex-row-ns mb3-l">
+    <figure class="ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="/research/2021_leap/" class="db">
         
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-70-ns pl3-ns">
+    <div class="flex flex-column w-100 w-90-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><b><a href="/research/2021_leap/" class="db">Pragmatic Contributions of the L*L-L% Contour in American English</a></b></h1>
         
@@ -499,23 +507,21 @@
       
       
       
-      <p class="f6 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas<br /></p>
+      <p class="f5 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas<br /></p>
       <footer class="w-100">
       
       
       
       
-        <span class="middot-divider"></span>
-        <p class="f7 dib mv1">Language Evolution, Acquisition, and Processing Workshop / The University of Chicago</p>
+        <p class="f7 dib mv1"><i>@Language Evolution, Acquisition, and Processing Workshop / The University of Chicago</i></p>
       
       <br />
       
-        <p class="f7 dib mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/invited-talk">invited talk</a> </p>
-      
       
     </footer>
-    </div>
   </div>
+      </div>
+
 
   
   
@@ -538,13 +544,13 @@
   
   
   
-  <div class="flex flex-column flex-row-ns mb3 mb4-l">
-    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-30-ns">
+  <div class="flex flex-column flex-row-ns mb3-l">
+    <figure class="ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="/research/2020_snl/" class="db">
         
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-70-ns pl3-ns">
+    <div class="flex flex-column w-100 w-90-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><b><a href="/research/2020_snl/" class="db">Adjective use by individuals with agrammatic primary progressive aphasia</a></b></h1>
         
@@ -552,23 +558,21 @@
       
       
       
-      <p class="f6 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K.<br /></p>
+      <p class="f5 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K.<br /></p>
       <footer class="w-100">
       
       
       
       
-        <span class="middot-divider"></span>
-        <p class="f7 dib mv1">Society for the Neurobiology of Language </p>
+        <p class="f7 dib mv1"><i>@Society for the Neurobiology of Language </i></p>
       
       <br />
       
-        <p class="f7 dib mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/poster">poster</a> </p>
-      
       
     </footer>
-    </div>
   </div>
+      </div>
+
 
   
   
@@ -585,13 +589,13 @@
   
   
   
-  <div class="flex flex-column flex-row-ns mb3 mb4-l">
-    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-30-ns">
+  <div class="flex flex-column flex-row-ns mb3-l">
+    <figure class="ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="/research/2020_aoa/" class="db">
         
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-70-ns pl3-ns">
+    <div class="flex flex-column w-100 w-90-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><b><a href="/research/2020_aoa/" class="db">Adjective use by individuals with agrammatic primary progressive aphasia</a></b></h1>
         
@@ -599,15 +603,13 @@
       
       
       
-      <p class="f6 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K.<br /></p>
+      <p class="f5 lh-copy mv2 flex-auto measure-wide">Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K.<br /></p>
       <footer class="w-100">
       
       
       
       
       <br />
-      
-        <p class="f7 dib mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/conference-talk">conference talk</a> </p>
       
       
         <p class="db pt1">
@@ -629,8 +631,9 @@
         </p>
       
     </footer>
-    </div>
   </div>
+      </div>
+
 
   
   
@@ -653,13 +656,13 @@
   
   
   
-  <div class="flex flex-column flex-row-ns mb3 mb4-l">
-    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-30-ns">
+  <div class="flex flex-column flex-row-ns mb3-l">
+    <figure class="ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="/research/2019_amlap/" class="db">
         
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-70-ns pl3-ns">
+    <div class="flex flex-column w-100 w-90-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><b><a href="/research/2019_amlap/" class="db">&lsquo;Nonetheless&rsquo; can reverse predictions immediately: evidence from ERPs</a></b></h1>
         
@@ -667,18 +670,15 @@
       
       
       
-      <p class="f6 lh-copy mv2 flex-auto measure-wide">Arkhipova, Yana; Sostarics, Thomas; Law, Ryan; Xiang, Ming; Chow, Wing Yee<br /></p>
+      <p class="f5 lh-copy mv2 flex-auto measure-wide">Arkhipova, Yana; Sostarics, Thomas; Law, Ryan; Xiang, Ming; Chow, Wing Yee<br /></p>
       <footer class="w-100">
       
       
       
       
-        <span class="middot-divider"></span>
-        <p class="f7 dib mv1">Architectures and Mechanisms for Language Processing (AMLaP2019) / Moscow, Russia</p>
+        <p class="f7 dib mv1"><i>@Architectures and Mechanisms for Language Processing (AMLaP2019) / Moscow, Russia</i></p>
       
       <br />
-      
-        <p class="f7 dib mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/poster">poster</a> </p>
       
       
         <p class="db pt1">
@@ -700,8 +700,9 @@
         </p>
       
     </footer>
-    </div>
   </div>
+      </div>
+
 
   
   
@@ -716,63 +717,29 @@
 
 <div class="list-pagination w-100">
   <ul class="paginate list pl0 tc dt w-100 ma0">
-    <li class="dtc w-25 tl v-mid">
+    <span></span>
+    <li class="dtc w-20 v-mid">
     
       <a href="/research/" class="previous pa2 db fw6" aria-label="Previous">&larr; Newer</a>
     
     </li>
-    <li class="dtc w-50 v-mid">
+    <li class="dtc w-10 v-mid">
       <span class="page_number fw6 f7 ttu tracked">2 of 2</span>
     </li>
-    <li class="dtc w-25 tr v-mid">
+    <li class="dtc w-20 v-mid">
     
       <span class="next pa2 db fw6">Older &rarr;</span>
     
     </li>
+        <span></span>
+
   </ul>
 </div>
 
 
   </section>
 </main>
-<aside class="page-sidebar" role="complementary">
-                         
- 
 
-
-                       
- 
-
-
-
-
-
-
-
-
-
-
-
-  <img src="/research/sidebar-listing-a.jpg" class="db ma0" id="siteImage">
-
-
-<div class="blog-info ph4 pt4 pb4 pb0-l">
-  
-
-  <h1 class="f3">Research Output</h1>
-  <p class="f6 lh-copy measure">This page contains links to my publications, conference talks, and poster
-presentations. Where applicable, use the buttons to download related files
-and visit related links such as osf materials and github code.
-Pages are listed in chronological order, and you can click the title of
-the work for additional descriptions and full citation entries.</p>
-  <p class="f7 measure lh-copy i mh0-l">Written by Thomas Sostarics</p>
-
-
-  
-</div>
-
-
-</aside>
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">

@@ -1,6 +1,7 @@
 baseURL = "https://www.tsostarics.com/"
 theme = "hugo-apero"
 languageCode = "en"
+publishDir = "public"
 title = "Thomas Sostarics"
 author = "Thomas Sostarics"
 copyright = "" # set to override the auto generated copyright using org info and now year
@@ -11,7 +12,6 @@ footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
 paginate = 12
 preserveTaxonomyNames = true
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 enableEmoji = true
 
 [markup]
@@ -34,7 +34,7 @@ enableEmoji = true
   description = ""
   favicon = "/img/favicon.ico"
   logo = "/img/house-solid.svg"
-  mainSections = ["blog", "research", "about"]
+  mainSections = ["research", "about"]
   navallcaps = true
   show_post_thumbnail = true
   # show/hide social icons in site header & footer

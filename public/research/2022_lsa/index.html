@@ -47,16 +47,16 @@
 
 
     
-        <meta property="og:image" content="http://localhost:4321/research/sidebar-listing-a.jpg" >
+        <meta property="og:image" content="http://localhost:4321/research/2022_lsa/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="http://localhost:4321/research/sidebar-listing-a.jpg" >
+        <meta name="twitter:image" content="http://localhost:4321/research/2022_lsa/featured.png" >
     
     
   <meta itemprop="name" content="What listeners can tell us about epistemic meaning and the LLL tune in American English">
 <meta itemprop="description" content="Design inspirations: Stacks.
 Sostarics, Thomas; Cole, Jennifer (2022). What listeners can tell us about epistemic meaning and the LLL tune in American English. 96th Annual Meeting of the Linguistic Society of America. Washington D.C., United States.">
 
-<meta itemprop="wordCount" content="36">
+<meta itemprop="wordCount" content="36"><meta itemprop="image" content="http://localhost:4321/research/2022_lsa/featured.png" />
 <meta itemprop="keywords" content="" />
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -238,13 +238,24 @@ Sostarics, Thomas; Cole, Jennifer (2022). What listeners can tell us about epist
 	
 	
 	
-	window.onload = (function() {
-	        const imagePath = document.getElementById("siteImage").src
-        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
-        	document.getElementById("siteImage").src = darkPath
-    	});
+	
 
 	}
+
+  if (body.className == "dark-mode") {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  } else {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "a.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  }
+  
 
 </script>
 
@@ -281,7 +292,7 @@ Sostarics, Thomas; Cole, Jennifer (2022). What listeners can tell us about epist
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">What listeners can tell us about epistemic meaning and the LLL tune in American English</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">Sostarics, Thomas; Cole, Jennifer</h4>
-        <p class="f6 measure lh-copy mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/conference-talk">conference talk</a> </p>
+        
         
       
         <div class="ph0 pt5">

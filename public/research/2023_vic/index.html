@@ -238,13 +238,24 @@ Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer (2023). Scalar Inference and Ri
 	
 	
 	
-	window.onload = (function() {
-	        const imagePath = document.getElementById("siteImage").src
-        	const darkPath = imagePath.slice(0,-5) + "b.jpg"
-        	document.getElementById("siteImage").src = darkPath
-    	});
+	
 
 	}
+
+  if (body.className == "dark-mode") {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "b.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  } else {
+    window.onload = (function() {
+	        const imagePath = document.getElementById("siteImage").src
+        	const imgPath = imagePath.slice(0,-5) + "a.jpg"
+        	document.getElementById("siteImage").src = imgPath
+    	});
+  }
+  
 
 </script>
 
@@ -281,7 +292,7 @@ Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer (2023). Scalar Inference and Ri
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer</h4>
-        <p class="f6 measure lh-copy mv1">By Thomas Sostarics in <a href="http://localhost:4321/categories/conference-talk">conference talk</a> </p>
+        
         
       
         <div class="ph0 pt5">

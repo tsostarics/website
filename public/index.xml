@@ -6,22 +6,7 @@
     <description>Recent content on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Feb 2019 13:38:41 -0600</lastBuildDate>
     <atom:link href="http://localhost:4321/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Contact</title>
-      <link>http://localhost:4321/contact/</link>
-      <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
-      <guid>http://localhost:4321/contact/</guid>
-      <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.&#xA;Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:4321/elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/elements/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Typography Styles &amp;amp; Element Examples | Thomas Sostarics&#xD;About&#xD;Posts&#xD;Research&#xD;Typography Styles &amp;amp; Element Examples&#xD;Font Sizes&#xD;A&#xD;A&#xD;A&#xD;A&#xD;A&#xD;A&#xD;A&#xD;A&#xD;6rem&#xA;(96px)&#xD;5rem&#xA;(80px)&#xD;3rem&#xA;(48px)&#xD;2.25rem&#xA;(36px)&#xD;1.5rem&#xA;(24px)&#xD;1.25rem&#xA;(20px)&#xD;1rem&#xA;(16px)&#xD;.875rem&#xA;(14px)&#xD;Type Samples&#xD;Head&amp;shy;line&#xD;Sub&amp;shy;head&amp;shy;line&#xD;Level 1 Heading&#xD;One page to rule them all...well, not really. This page displays sample typography and page elements to illustrate their style.</description>
-    </item>
     <item>
       <title> Adjective use by individuals with agrammatic primary progressive aphasia</title>
       <link>http://localhost:4321/research/2020_snl/</link>
@@ -58,13 +43,6 @@
       <description>Design inspirations: Toothpaste. Sinusoids.&#xA;Sostarics, Thomas; Cole, Jennifer (2021). Assessing Contrasts in Intonation Through Contrasts in Speaker Commitment. 26th Midcontinental Phonetics and Phonology Conference. The University of Chicago.</description>
     </item>
     <item>
-      <title>Contributors</title>
-      <link>http://localhost:4321/contributors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/contributors/</guid>
-      <description>Thank you to all the folks who have contributed both technical and creative skills to this project:&#xA;Desirée De Leon &amp;#x1f992; (designed 5 of the custom color themes, made illustrations for the workshop, and provided general aesthetic feedback along the way)&#xA;Garrick Aden-Buie &amp;#x1f9d9; (debugged headroom.js and lent his panelset.js code to the theme)&#xA;Allison Horst &amp;#x1f415; (awesome illustrations of campfires, seedlings, and evergreens, as well as my R Markdown hedgehog mascot &amp;#x1f994;)</description>
-    </item>
-    <item>
       <title>Epistemic meaning and the LLL tune in American English</title>
       <link>http://localhost:4321/research/2022_tai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -93,13 +71,6 @@
       <description>Iskarous, K., Cole, J., &amp;amp; Sostarics, T. (2024). Intonational tunes as compositional, but also autonomous, dynamical objects. Oral presentation at Variance and invariance in phonological representation: Insights from articulation workshop, Laboratory Phonology 19</description>
     </item>
     <item>
-      <title>License</title>
-      <link>http://localhost:4321/license/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/license/</guid>
-      <description>My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License.</description>
-    </item>
-    <item>
       <title>Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English</title>
       <link>http://localhost:4321/research/2023_interspeech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -125,7 +96,7 @@
       <link>http://localhost:4321/research/2024_elm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:4321/research/2024_elm/</guid>
-      <description>�</description>
+      <description></description>
     </item>
     <item>
       <title>Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective</title>
