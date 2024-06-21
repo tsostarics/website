@@ -12,6 +12,11 @@ location: "Leiden, The Netherlands"
 journal: ""
 date: "6/14/2024"
 date_end: "6/14/2024"
+links:
+  - icon:  chalkboard-teacher
+    icon_pack:  fas
+    name: poster
+    url: /research/2024_crossin/Crossin_Poster.pdf
 type: publication
 ---
 
