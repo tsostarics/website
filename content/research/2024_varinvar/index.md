@@ -12,6 +12,11 @@ location: "Seoul, South Korea"
 journal: ""
 date: "6/26/2024"
 date_end: "6/26/2024"
+links:
+  - icon:  file-powerpoint
+    icon_pack:  fas
+    name: slides
+    url: /research/2024_varinvar/Iskarousetal_Slides.pdf
 type: publication
 ---
 
