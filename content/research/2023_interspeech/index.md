@@ -37,7 +37,7 @@ links:
   - icon:  doi
     icon_pack:  ai
     name: doi
-    url: /research/2023_interspeech/doi:10.21437/ Interspeech.2023-315
+    url: https://doi.org/10.21437/Interspeech.2023-315
 type: publication
 ---
 

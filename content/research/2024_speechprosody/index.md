@@ -30,6 +30,14 @@ links:
     icon_pack:  fas
     name: poster
     url: /research/2024_speechprosody/SostaricsCole_SP2024_poster.jpg
+  - icon:  bookmark
+    icon_pack:  fas
+    name: bibtex
+    url: /research/2024_speechprosody/sostarics2024pitchmendr.bib
+  - icon:  doi
+    icon_pack:  ai
+    name: doi
+    url: http://doi.org/10.21437/SpeechProsody.2024-59 
 type: publication
 ---
 

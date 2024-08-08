@@ -33,7 +33,7 @@ links:
   - icon:  doi
     icon_pack:  ai
     name: doi
-    url: /research/2022_tai/doi:10.21437/TAI.2021-3
+    url: https://doi.org/10.21437/TAI.2021-3
 type: publication
 ---
 

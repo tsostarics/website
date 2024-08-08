@@ -14,6 +14,18 @@ journal: ""
 date: "6/12/2024"
 date_end: "6/14/2024"
 links:
+  - icon:  osf
+    icon_pack:  ai
+    name: osf
+    url: https://osf.io/bc6a2/
+  - icon:  github
+    icon_pack:  fab
+    name: code
+    url: https://github.com/tsostarics/ELM2024_Analysis
+  - icon:  file-pdf
+    icon_pack:  fas
+    name: pdf
+    url: /research/2024_elm/SostaricsRonaiCole_ELM2024.pdf
   - icon:  file-powerpoint
     icon_pack:  fas
     name: slides
