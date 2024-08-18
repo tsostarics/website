@@ -5,42 +5,51 @@
     <link>https://www.tsostarics.com/categories/</link>
     <description>Recent content in Categories on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <atom:link href="https://www.tsostarics.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://www.tsostarics.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Conference Talk</title>
+      <title>conference talk</title>
       <link>https://www.tsostarics.com/categories/conference-talk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://www.tsostarics.com/categories/conference-talk/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Invited Talk</title>
+      <title>invited talk</title>
       <link>https://www.tsostarics.com/categories/invited-talk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://www.tsostarics.com/categories/invited-talk/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Journal Article</title>
+      <title>journal article</title>
       <link>https://www.tsostarics.com/categories/journal-article/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://www.tsostarics.com/categories/journal-article/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Poster</title>
+      <title>poster</title>
       <link>https://www.tsostarics.com/categories/poster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://www.tsostarics.com/categories/poster/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Proceedings</title>
+      <title>proceedings</title>
       <link>https://www.tsostarics.com/categories/proceedings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://www.tsostarics.com/categories/proceedings/</guid>
       <description></description>
     </item>
+    
   </channel>
 </rss>
