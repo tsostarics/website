@@ -4,7 +4,7 @@ year: "2024"
 subtitle: "Cole, Jennifer*; Sostarics, Thomas"
 categories:
   - conference talk
-excerpt: "Oral Presentation (*=presenting author)"
+excerpt: "(Oral Presentation; *=presenting author)"
 title: "In Search of the Phrase Accent: Nuclear Tunes in American English"
 event: "29th Midcontinental Phonetics and Phonology Conference (Midphon 2024)"
 event_url: ""

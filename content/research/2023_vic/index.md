@@ -4,7 +4,7 @@ year: "2023"
 subtitle: "Sostarics, Thomas; Ronai, Eszter; Cole, Jennifer"
 categories:
   - conference talk
-excerpt: ""
+excerpt: "(Oral Presentation)"
 title: "Scalar Inference and Rise-Fall-Rise in American English: Towards a Priming Perspective"
 event: "Voices in Contexts Workshop"
 event_url: "https://sfb1252.uni-koeln.de/veranstaltungen/workshop-voices-in-context"

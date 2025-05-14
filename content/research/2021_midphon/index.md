@@ -4,7 +4,7 @@ year: "2021"
 subtitle: "Sostarics, Thomas; Cole, Jennifer"
 categories:
   - conference talk
-excerpt: ""
+excerpt: "(Oral Presentation)"
 title: "Assessing Contrasts in Intonation Through Contrasts in Speaker Commitment"
 event: "26th Midcontinental Phonetics and Phonology Conference (Midphon 2021)"
 event_url: ""

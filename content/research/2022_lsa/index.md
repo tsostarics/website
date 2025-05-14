@@ -4,7 +4,7 @@ year: "2022"
 subtitle: "Sostarics, Thomas; Cole, Jennifer"
 categories:
   - conference talk
-excerpt: ""
+excerpt: "(Oral Presentation)"
 title: "What listeners can tell us about epistemic meaning and the LLL tune in American English"
 event: "96th Annual Meeting of the Linguistic Society of America (LSA 2022)"
 event_url: ""

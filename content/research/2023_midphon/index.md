@@ -4,7 +4,9 @@ year: "2023"
 subtitle: "Sostarics, Thomas and Cole, Jennifer"
 categories:
   - poster
-excerpt: ""
+excerpt: "(Poster presentation)
+
+***1st Place Best Paper Award*** "
 title: "Accommodation of Rising and Falling Intonation in American English"
 event: "28th Midcontinental Phonetics and Phonology Conference (Midphon 2023)"
 event_url: ""

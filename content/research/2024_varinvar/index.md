@@ -4,7 +4,7 @@ year: "2024"
 subtitle: "Iskarous, Khalil*; Cole, Jennifer; Sostarics, Thomas"
 categories:
   - conference talk
-excerpt: "Oral Presentation (*=presenting author)"
+excerpt: "(Oral Presentation; *=presenting author)"
 title: "Intonational tunes as compositional, but also autonomous, dynamical objects"
 event: "Variance and invariance in phonological representation: Insights from articulation (Satellite Workshop at LabPhon19)"
 event_url: "https://labphon.org/labphon19/variance-and-invariance"

@@ -4,7 +4,9 @@ year: "2019"
 subtitle: "Arkhipova, Yana; Sostarics, Thomas; Law, Ryan; Xiang, Ming; Chow, Wing Yee"
 categories:
   - poster
-excerpt: ""
+excerpt: "(Poster presentation)
+
+***1st Place Best Paper Award*** "
 title: "'Nonetheless' can reverse predictions immediately: evidence from ERPs"
 event: "Architectures and Mechanisms for Language Processing (AMLaP2019)"
 event_url: ""

@@ -4,7 +4,7 @@ year: "2020"
 subtitle: "Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K."
 categories:
   - conference talk
-excerpt: ""
+excerpt: "(Oral Presentation)"
 title: "Adjective use by individuals with agrammatic primary progressive aphasia"
 event: ""
 event_url: ""

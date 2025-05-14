@@ -2,64 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.tsostarics.com/research/2020_snl/</loc>
+    <loc>http://localhost:4321/research/2020_snl/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2019_amlap/</loc>
+    <loc>http://localhost:4321/research/2019_amlap/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/about/</loc>
+    <loc>http://localhost:4321/about/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2023_midphon/</loc>
+    <loc>http://localhost:4321/research/2023_midphon/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2020_aoa/</loc>
+    <loc>http://localhost:4321/research/2020_aoa/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2021_midphon/</loc>
+    <loc>http://localhost:4321/research/2021_midphon/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/categories/</loc>
+    <loc>http://localhost:4321/categories/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/categories/conference-talk/</loc>
+    <loc>http://localhost:4321/categories/conference-talk/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2022_tai/</loc>
+    <loc>http://localhost:4321/research/2022_tai/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2022_midphon/</loc>
+    <loc>http://localhost:4321/research/2022_midphon/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2024_midphon/</loc>
+    <loc>http://localhost:4321/research/2025_tai2/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2024_crossin/</loc>
+    <loc>http://localhost:4321/research/2024_midphon/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2024_varinvar/</loc>
+    <loc>http://localhost:4321/research/2024_crossin/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/categories/invited-talk/</loc>
+    <loc>http://localhost:4321/research/2024_varinvar/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/categories/journal-article/</loc>
+    <loc>http://localhost:4321/categories/invited-talk/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2023_interspeech/</loc>
+    <loc>http://localhost:4321/categories/journal-article/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2024_speechprosody/</loc>
+    <loc>http://localhost:4321/research/2023_interspeech/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/categories/poster/</loc>
+    <loc>http://localhost:4321/research/2024_speechprosody/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2021_leap/</loc>
+    <loc>http://localhost:4321/categories/poster/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/categories/proceedings/</loc>
+    <loc>http://localhost:4321/research/2021_leap/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2024_elm/</loc>
+    <loc>http://localhost:4321/categories/proceedings/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/</loc>
+    <loc>http://localhost:4321/research/2024_elm/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2023_vic/</loc>
+    <loc>http://localhost:4321/research/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/series/</loc>
+    <loc>http://localhost:4321/research/2023_vic/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/tags/</loc>
+    <loc>http://localhost:4321/series/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2023_icphs/</loc>
+    <loc>http://localhost:4321/tags/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2024_aphasiajofnlx/</loc>
+    <loc>http://localhost:4321/research/2023_icphs/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/</loc>
+    <loc>http://localhost:4321/research/2025_tai/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2023_asa/</loc>
+    <loc>http://localhost:4321/research/2024_aphasiajofnlx/</loc>
   </url><url>
-    <loc>https://www.tsostarics.com/research/2022_lsa/</loc>
+    <loc>http://localhost:4321/</loc>
+  </url><url>
+    <loc>http://localhost:4321/research/2023_asa/</loc>
+  </url><url>
+    <loc>http://localhost:4321/research/2022_lsa/</loc>
   </url>
 </urlset>

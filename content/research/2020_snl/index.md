@@ -4,7 +4,9 @@ year: "2020"
 subtitle: "Sostarics, Thomas; Walenski, Matthew; Mesulam, M. Marsel; Thompson, Cynthia K."
 categories:
   - poster
-excerpt: ""
+excerpt: "(Poster presentation)
+
+***1st Place Best Paper Award*** "
 title: " Adjective use by individuals with agrammatic primary progressive aphasia"
 event: "Society for the Neurobiology of Language"
 event_url: ""

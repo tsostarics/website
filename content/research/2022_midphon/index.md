@@ -4,7 +4,9 @@ year: "2022"
 subtitle: "Sostarics, Thomas; Cole, Jennifer"
 categories:
   - poster
-excerpt: ""
+excerpt: "(Poster presentation)
+
+***1st Place Best Paper Award*** "
 title: "Exploring the Voice Quality of Nuclear Tunes"
 event: "27th Midcontinental Phonetics and Phonology Conference (Midphon 2022)"
 event_url: "https://linguistics.wustl.edu/events/midphon-27"
