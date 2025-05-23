@@ -1,60 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Proceedings on Thomas Sostarics</title>
-    <link>http://localhost:4321/categories/proceedings/</link>
-    <description>Recent content in Proceedings on Thomas Sostarics</description>
+    <title>proceedings on Thomas Sostarics</title>
+    <link>https://www.tsostarics.com/categories/proceedings/</link>
+    <description>Recent content in proceedings on Thomas Sostarics</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <atom:link href="http://localhost:4321/categories/proceedings/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://www.tsostarics.com/categories/proceedings/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Epistemic meaning and the LLL tune in American English</title>
-      <link>http://localhost:4321/research/2022_tai/</link>
+      <link>https://www.tsostarics.com/research/2022_tai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2022_tai/</guid>
-      <description>Design inspirations: Ribbons.&#xA;Sostarics, T., Cole, J. (2021) Epistemic Meaning and the LLL Tune in American English. Proc. 1st International Conference on Tone and Intonation (TAI), 11-15, doi: 10.21437/TAI.2021-3</description>
+      
+      <guid>https://www.tsostarics.com/research/2022_tai/</guid>
+      <description>Design inspirations: Ribbons.
+Sostarics, T., Cole, J. (2021) Epistemic Meaning and the LLL Tune in American English. Proc. 1st International Conference on Tone and Intonation (TAI), 11-15, doi: 10.21437/TAI.2021-3</description>
     </item>
+    
     <item>
       <title>F0 Correlates of Perceived Speaker Surprise in American English: Accents vs Edge Tones</title>
-      <link>http://localhost:4321/research/2025_tai2/</link>
+      <link>https://www.tsostarics.com/research/2025_tai2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2025_tai2/</guid>
+      
+      <guid>https://www.tsostarics.com/research/2025_tai2/</guid>
       <description>Stanhope, R., Sostarics, T., Cole, J. (2025) F0 Correlates of Perceived Speaker Surprise in American English: Accents vs Edge Tones. Proc. 3rd International Conference on Tone and Intonation (TAI).</description>
     </item>
+    
     <item>
       <title>Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English</title>
-      <link>http://localhost:4321/research/2023_interspeech/</link>
+      <link>https://www.tsostarics.com/research/2023_interspeech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2023_interspeech/</guid>
-      <description>Design inspirations: Building blocks. Cat&amp;rsquo;s cradle. Jigsaw puzzles.&#xA;Sostarics, T., &amp;amp; Cole, J. (2023). Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English. Proceedings of Interspeech 2023.</description>
+      
+      <guid>https://www.tsostarics.com/research/2023_interspeech/</guid>
+      <description>Design inspirations: Building blocks. Cat&amp;rsquo;s cradle. Jigsaw puzzles.
+Sostarics, T., &amp;amp; Cole, J. (2023). Pitch Accent Variation and the Interpretation of Rising and Falling Intonation in American English. Proceedings of Interspeech 2023.</description>
     </item>
+    
     <item>
       <title>PitchMendR: A Tool for the Diagnosis and Treatment of F0 Irregularities</title>
-      <link>http://localhost:4321/research/2024_speechprosody/</link>
+      <link>https://www.tsostarics.com/research/2024_speechprosody/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2024_speechprosody/</guid>
-      <description>R Package available at: github.com/tsostarics/PitchMendR&#xA;Sostarics, Thomas; Cole, Jennifer (2024). PitchMendR: A Tool for the Diagnosis and Treatment of F0 Irregularities. In Proceedings of Speech Prosody 2024.</description>
+      
+      <guid>https://www.tsostarics.com/research/2024_speechprosody/</guid>
+      <description>R Package available at: github.com/tsostarics/PitchMendR
+Sostarics, Thomas; Cole, Jennifer (2024). PitchMendR: A Tool for the Diagnosis and Treatment of F0 Irregularities. In Proceedings of Speech Prosody 2024.</description>
     </item>
+    
     <item>
       <title>Relating Scalar Inference and Alternative Activation: A View from the Rise-Fall-Rise Tune in American English</title>
-      <link>http://localhost:4321/research/2024_elm/</link>
+      <link>https://www.tsostarics.com/research/2024_elm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2024_elm/</guid>
+      
+      <guid>https://www.tsostarics.com/research/2024_elm/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Testing the Locus of Speech-Act Meaning in English Intonation</title>
-      <link>http://localhost:4321/research/2023_icphs/</link>
+      <link>https://www.tsostarics.com/research/2023_icphs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2023_icphs/</guid>
+      
+      <guid>https://www.tsostarics.com/research/2023_icphs/</guid>
       <description>Design inspirations: Riemann sums. Halftone patterns. Northwestern purple &amp;amp; ICPhS blue. Whiteboards. Handwriting. Sostarics, T., Cole, J. (2023) Testing the Locus of Speech-Act Meaning in English Intonation. Proc. International Congress of Phonetic Sciences (ICPhS).</description>
     </item>
+    
     <item>
       <title>The Dynamical Structure of the Nuclear Tune: The Phrase Accent</title>
-      <link>http://localhost:4321/research/2025_tai/</link>
+      <link>https://www.tsostarics.com/research/2025_tai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/research/2025_tai/</guid>
+      
+      <guid>https://www.tsostarics.com/research/2025_tai/</guid>
       <description>Iskarous, K., Sostarics, T., Cole, J. (2025) The Dynamical Structure of the Nuclear Tune: The Phrase Accent. Proc. 3rd International Conference on Tone and Intonation (TAI).</description>
     </item>
+    
   </channel>
 </rss>

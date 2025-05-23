@@ -13,6 +13,11 @@ location: "Munich, Germany"
 journal: ""
 date: "5/16/2025"
 date_end: "5/18/2025"
+links:
+  - icon:  file-powerpoint
+    icon_pack:  fas
+    name: slides
+    url: /research/2025_tai2/StanhopeSostaricsCole_tai2025_slides.pdf
 type: publication
 ---
 
