@@ -21,4 +21,4 @@ links:
 type: publication
 ---
 
-Stanhope, R., Sostarics, T., Cole, J. (2025) F0 Correlates of Perceived Speaker Surprise in American English: Accents vs Edge Tones. Proc. 3rd International Conference on Tone and Intonation (TAI).
+Stanhope, R., Sostarics, T., Cole, J. (2025) F0 Correlates of Perceived Speaker Surprise in American English: Accents vs Edge Tones.  Proc. 3rd International Conference on Tone and Intonation (TAI).
