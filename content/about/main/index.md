@@ -6,13 +6,28 @@ use_featured: false # if false, use most recent by date
 number_categories: 0 # set to zero to exclude
 show_intro: true
 intro: |
-  I am a PhD Candidate in Linguistics and a Data Science Fellow at Northwestern University interested in prosody, pragmatics, phonetics, and aphasia. My research focuses on data-driven experimental approaches to understanding intonational meaning in American English. Adjacent to my research, I am interested in R package development, ordinal data analysis, data visualization, and experimental design. Outside of my research, I enjoy horror movies, graphic design, biking, and taking photos of cities.
+  I am an incoming Systems Engineer at McMaster-Carr in Illinois.
   
-  At Northwestern I am affiliated with the [Prosody & Speech Dynamics Lab](https://www.prosodylab.linguistics.northwestern.edu/).
+  I recently received my PhD in Linguistics from Northwestern University. 
+  My research focused on data-driven experimental approaches to understanding intonational meaning in American English. 
+  I am interested in R package development, inferential statistics, ordinal data analysis, data visualization, and experimental design. 
+  In my free time, I enjoy horror movies, graphic design, role playing games, and walking.
   
-  Before coming to Northwestern, I obtained a BA in Linguistics from the [University of Chicago](https://linguistics.uchicago.edu/), where I also worked with electrophysiological experiments on concessive connectors in the [Language Processing Lab](https://lucian.uchicago.edu/blogs/lpl/).
+  I am the author and maintainer for the `{contrastable}` R package [https://cran.r-project.org/web/packages/contrastable/index.html]((CRAN link)).
   
-  I can be reached at tsostarics [at] u.northwestern.edu. Please note that I only go by Thomas.
+  Although I am no longer in academia, I am available by commission for methods consulting. Examples of things I can help with:
+  
+   - R programming and analysis code review
+   - Praat/R scripts for small-scale projects
+   - Data visualization and visual asset creation
+   - Feedback and assistance with slides and posters for conferences/job talks
+   - Teaching/Explaining topics in regression modeling (e.g., ordinal regression, random effects, contrast coding) 
+   
+  I believe strongly that researchers, and especially students, should be able to understand, carry out, and defend their own analyses.
+  To that end, I will not do full analyses of your data *for* you. I am happy to help get you on the right track though.
+  Note that I work full time and my availability is mostly on the weekends.
+  
+  I can be reached at tsostarics [at] gmail.com. Please note that I only go by Thomas.
 show_outro: false
 outro: 
 ---

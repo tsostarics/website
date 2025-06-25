@@ -92,10 +92,6 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://github.com/tsostarics"
   [[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://twitter.com/t_sostarics"
-  [[params.social]]
       icon      = "google-scholar"
       icon_pack = "ai"
       url       = "https://scholar.google.com/citations?user=EmzrX64AAAAJ"

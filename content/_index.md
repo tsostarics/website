@@ -3,9 +3,8 @@ action_label: Read More &rarr;
 action_link: /about/
 action_type: text
 description: |
-  Hi, I am a PhD student in Linguistics at Northwestern University. 
-  This is my personal website where I host things related to my research, data science, and other projects. 
-  I took the photos used throughout the site.
+  Hi, I am a systems engineer in Chicago with a PhD in Linguistics from Northwestern University. 
+  This is my personal website where I host things related to my research, data science, design work, and other projects. 
 image_left: true
 images:
 - img/cities-c.png
