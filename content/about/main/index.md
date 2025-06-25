@@ -13,7 +13,7 @@ intro: |
   I am interested in R package development, inferential statistics, ordinal data analysis, data visualization, and experimental design. 
   In my free time, I enjoy horror movies, graphic design, role playing games, and walking.
   
-  I am the author and maintainer for the `{contrastable}` R package [https://cran.r-project.org/web/packages/contrastable/index.html]((CRAN link)).
+  I am the author and maintainer for the [`{contrastable}`](https://cran.r-project.org/web/packages/contrastable/index.html) R package.
   
   Although I am no longer in academia, I am available by commission for methods consulting. Examples of things I can help with:
   
