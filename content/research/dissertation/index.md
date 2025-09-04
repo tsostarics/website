@@ -13,9 +13,9 @@ journal: ""
 date: ""
 date_end: ""
 links:
-  - icon:  file-powerpoint
+  - icon:  file-pdf
     icon_pack:  fas
-    name: slides
+    name: pdf
     url: /research/dissertation/Sostarics_2025.pdf
   - icon:  doi
     icon_pack:  ai
