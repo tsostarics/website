@@ -29,7 +29,7 @@ enableEmoji = true
 
 [params]
   enable_dark_mode = true
-  orgName = "Northwestern University"
+  orgName = ""
   orgLocal = "Chicago, IL"
   description = ""
   favicon = "/img/favicon.ico"
@@ -72,7 +72,7 @@ enableEmoji = true
 
   # Configuration of https://utteranc.es/ for comments
   [params.utterances]
-    use_utterances = true
+    use_utterances = false
     repo_name = "tsostarics/website"
     issue_term = "pathname" # url, pathname, or title
     theme = "boxy-light"
@@ -133,16 +133,12 @@ enableEmoji = true
     weight = 4
 
   # Configure footer
-  [[menu.footer]]
-    name = "License"
-    title = "License"
-    url = "/license/"
-    weight = 1
-  [[menu.footer]]
-    name = "Contact"
-    title = "Contact form"
-    url = "/contact/"
-    weight = 2
+  #[[menu.footer]]
+  #  name = "License"
+  #  title = "License"
+  #  url = "/license/"
+  #  weight = 1
+
 
 # see https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
