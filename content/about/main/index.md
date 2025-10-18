@@ -6,7 +6,7 @@ use_featured: false # if false, use most recent by date
 number_categories: 0 # set to zero to exclude
 show_intro: true
 intro: |
-  I am an incoming Systems Engineer at McMaster-Carr in Illinois.
+  I am a Systems Engineer at McMaster-Carr in Illinois.
   
   I recently received my PhD in Linguistics from Northwestern University. 
   My research focused on data-driven experimental approaches to understanding intonational meaning in American English. 
@@ -23,10 +23,6 @@ intro: |
    - Feedback and assistance with slides and posters for conferences/job talks
    - Teaching/Explaining topics in regression modeling (e.g., ordinal regression, random effects, contrast coding) 
    
-  I believe strongly that researchers, and especially students, should be able to understand, carry out, and defend their own analyses.
-  To that end, I will not do full analyses of your data *for* you. I am happy to help get you on the right track though.
-  Note that I work full time and my availability is mostly on the weekends.
-  
   I can be reached at tsostarics [at] gmail.com. Please note that I only go by Thomas.
 show_outro: false
 outro: 
