@@ -104,6 +104,8 @@ dark-mode main * {
     }
   }
 
+
+
   // apply tachyons classes to blog lists
   .blog-content {
     article { border-color: $borderColorDark;  }
@@ -114,6 +116,7 @@ dark-mode main * {
       @extend .mt4-l ;
     }
   }
+
 
   // make the ad unit sticky and pad details
   .page-sidebar {

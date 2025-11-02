@@ -1,0 +1,71 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <!-- Top section: title + intro text stays centered -->
+  <section class="gallery-header mw8 center mb2">
+    <h2 class="f2 lh-solid tc center fw4">{{ .Title | markdownify }}</h2>
+    {{ with .Description }}
+      <p class="f5 measure lh-copy tc center">{{ . | markdownify }}</p>
+    {{ end }}
+  </section>
+
+  <!-- Full-width gallery grid -->
+  <section class="gallery-grid flex flex-wrap justify-center items-start bt">
+    {{ range .Pages }}
+      {{ $borderColor := default "transparent" .Params.border_color }}
+      {{ $borderWidth := default "0px" .Params.border_width }}
+      {{ $matColor := default "transparent" .Params.mat_color }}
+      {{ $matWidth := default "0px" .Params.mat_width }}
+
+      <!-- Each artwork tile -->
+      <div
+        class="gallery-item flex flex-column items-stretch mt4 mb1 mh3"
+        style="flex: 1 1 22rem; max-width: 30rem;"
+      >
+        <!-- Image container: fixed height for consistent vertical centering -->
+        <div
+          class="image-wrapper flex justify-center items-center mb3"
+          style="height: 28rem;"
+        >
+          <div
+            class="frame-wrapper"
+            style="
+              border: {{ $borderWidth }} solid {{ $borderColor }};
+              box-sizing: border-box;
+              box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+              display: inline-block;
+            "
+          >
+            <div
+              class="mat-wrapper"
+              style="border: {{ $matWidth }} solid {{ $matColor }}; box-sizing: border-box;"
+            >
+              <img
+                src="{{ .Params.image }}"
+                alt="{{ .Title }}"
+                style="
+                  display: block;
+                  max-width: 100%;
+                  max-height: 25rem;
+                  height: auto;
+                  object-fit: contain;
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Caption: top-aligned text -->
+        <div
+          class="gallery-text tc flex flex-column justify-start"
+          style="max-width: 28rem; min-height: 6rem;"
+        >
+          <h3 class="f4 fw5 mt0 mb1">{{ .Title }}</h3>
+          {{ with .Params.description }}
+            <p class="f6 lh-copy mt0" style="text-align: left">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

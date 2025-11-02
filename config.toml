@@ -122,15 +122,20 @@ enableEmoji = true
     url = "https://tsostaricsblog.netlify.app"
     weight = 2
   [[menu.header]]
+    name = "Artwork"
+    title = "Artwork"
+    url = "/artworks/"
+    weight = 3
+  [[menu.header]]
     name = "Research"
     title = "Research"
     url = "/research/"
-    weight = 3
+    weight = 4
   [[menu.header]]
     name = "CV"
     title = "CV"
     url = "https://www.tsostarics.com/Sostarics_CV.pdf"
-    weight = 4
+    weight = 5
 
   # Configure footer
   #[[menu.footer]]

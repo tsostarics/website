@@ -156,6 +156,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.gallery-grid.bt {
+  border-color: $borderColorDark;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+
+
 // make the ad unit sticky and pad details
 .page-sidebar {
   .ad-unit {
