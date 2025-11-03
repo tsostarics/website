@@ -37,7 +37,7 @@
           >
             <div
               class="mat-wrapper"
-              style="border: {{ $matWidth }} solid {{ $matColor }}; box-sizing: border-box;"
+              style="border: {{ $matWidth }} solid {{ $matColor }}; box-sizing: border-box; position: relative"
             >
               <img
                 src="{{ .Params.image }}"
@@ -51,9 +51,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
                 "
               />
-
-            </div>
-            <div
+ <div
       class="image-overlay"
       style="
         position: absolute;
@@ -65,6 +63,8 @@
         cursor: default;
       "
     ></div>
+            </div>
+
           </div>
         </div>
 

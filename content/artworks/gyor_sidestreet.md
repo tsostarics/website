@@ -2,7 +2,7 @@
 _build:
   render: never
 
-title: "Győr side street"
+title: "Győr Side Street"
 image: "/images/artworks/gyor_sidestreet.jpg"
 description: "Győr, Hungary (2023). Side street by the Győr Benedictine Church of St. Ignatius of Loyola."
 border_color: "#131808"
