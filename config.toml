@@ -9,7 +9,6 @@ googleAnalytics = "G-3WX3HL4C8D"
 disqusShortname = "" # see params.utterances to use utterances instead of Disqus
 metaDataFormat = "yaml"
 footnoteReturnLinkContents = "&#8617;" # ↩
-enableRobotsTXT         = true
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
 paginate = 12
 preserveTaxonomyNames = true
