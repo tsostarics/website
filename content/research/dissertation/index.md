@@ -33,3 +33,4 @@ from Husband & Ferreira (2016) [...]" -> Participants listened to 64 critical tr
  - Pg 189: "proment" should read "prominent"
  - Pg 189: Citation to Iskarous, Sostarics, and Cole 2025 is defunct; we ended up not actually submitting a proceedings paper to TAI 2025. The slides from that conference are available though. A full paper with that material will eventually be written.
  - Ch 4: I use the running example "The office feels cool/cold" throughout this chapter, but this was actually the sentence frame for the <cold, freezing> scale. See items 5 and 34 in Appendix C.1.1. This was just a mistake in the exposition (cold is a shorter word than freezing).
+ - Pg 224-225: Critical items 2, 3, 5, and 6 in Appendix C.1.1 list three answers and probe questions instead of 2. The third sentence in each sequence can be ignored.
